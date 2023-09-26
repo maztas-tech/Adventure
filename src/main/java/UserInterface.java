@@ -1,5 +1,52 @@
+import java.util.Scanner;
+
 public class UserInterface {
-    public void startProgram(){
-        System.out.println("Hello world!");
+    private Room currentInterface;
+    Adventure adventure = new Adventure();
+
+    public void startProgram() {
+        adventure.buildMaze();
+
+        Scanner keyboard = new Scanner(System.in);
+        String userChoice;
+
+        currentInterface = adventure.getCurrent();
+
+
+        do {
+            System.out.println("Would you like to move or would you like to look around ");
+            userChoice = keyboard.nextLine().toLowerCase();
+            if (userChoice.contains("help")) {
+                System.out.println("Write east/west/north/south to move in that direction. Write look to look around. Write exit to exit the game");
+            }
+
+            if (userChoice.contains("look")) {
+                System.out.println(currentInterface.getDescription());
+            } else if (userChoice.contains("east") && currentInterface.getEast() != null) {
+                currentInterface = currentInterface.getEast();
+            } else if (userChoice.contains("east") && currentInterface.getEast() == null) {
+                System.out.println("You cannot move that direction");
+            } else if (userChoice.contains("west") && currentInterface.getWest() != null) {
+                currentInterface = currentInterface.getWest();
+            } else if (userChoice.contains("west") && currentInterface.getWest() == null) {
+                System.out.println("You cannot move that direction");
+            } else if (userChoice.contains("north") && currentInterface.getNorth() != null) {
+                currentInterface = currentInterface.getNorth();
+            } else if (userChoice.contains("north") && currentInterface.getNorth() == null) {
+                System.out.println("You cannot move that direction!");
+            } else if (userChoice.contains("south") && currentInterface.getSouth() != null) {
+                currentInterface = currentInterface.getSouth();
+            } else if (userChoice.contains("south") && currentInterface.getSouth() == null) {
+                System.out.println("You cannot move that direction!");
+            }
+
+        } while (!userChoice.contains("exit"));
+
+        System.exit(0);
     }
+
+
+
 }
+
+

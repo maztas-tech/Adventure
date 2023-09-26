@@ -1,22 +1,22 @@
 import java.util.Scanner;
 public class Adventure {
-    Scanner keyboard = new Scanner(System.in);
-
     private Room current;
 
     public void buildMaze() {
-
-        Room room1 = new Room("Room 1", "Beskrivelse 1");
-        Room room2 = new Room("Room 2", "Beskrivelse 2");
-        Room room3 = new Room("Room 3", "Beskrivelse 3");
-        Room room4 = new Room("Room 4", "Beskrivelse 4");
-        Room room5 = new Room("Room 5", "Beskrivelse 5");
-        Room room6 = new Room("Room 6", "Beskrivelse 6");
-        Room room7 = new Room("Room 7", "Beskrivelse 7");
-        Room room8 = new Room("Room 8", "Beskrivelse 8");
-        Room room9 = new Room("Room 9", "Beskrivelse 9");
+        Room room1 = new Room("Room 1", "A room with no distinct features, except two doors.");
+        Room room2 = new Room("Room 2", "A dimly lit room with a musty smell.");
+        Room room3 = new Room("Room 3", "A large room with a high ceiling.");
+        Room room4 = new Room("Room 4", "A mysterious room filled with strange artifacts.");
+        Room room5 = new Room("Room 5", "A hidden chamber with a single exit to the east.");
+        Room room6 = new Room("Room 6", "A narrow corridor with flickering torches.");
+        Room room7 = new Room("Room 7", "An underground cave with a shimmering pool.");
+        Room room8 = new Room("Room 8", "A dusty library with rows of ancient books.");
+        Room room9 = new Room("Room 9", "A secret chamber containing a treasure chest.");
 
         current = room1;
+
+
+
 
         room1.setWest(null);
         room1.setEast(room2);
@@ -70,70 +70,12 @@ public class Adventure {
                 Help - For a tutorial!
                 Look - To look around in your current room
                 """);
-        choice();
-    }
-
-    public void choice(){
-        String userChoice = "start";
-
-        do {
-                System.out.println("Would you like to move or would you like to look around ");
-                userChoice = keyboard.nextLine().toLowerCase();
-                if (userChoice.contains("help")) {
-                    System.out.println("Write east/west/north/south to move in that direction. Write look to look around. Write exit to exit the game");
-                }
-                if (userChoice.contains("look")){
-                    System.out.println(current.getDescription());
-                } else if (userChoice.contains("east") && current.getEast()!=null){
-                    userGoEast(userChoice);
-                }
-                else if (userChoice.contains("east") && current.getEast()==null){
-                    System.out.println("You cannot move that direction");
-                }
-                else if (userChoice.contains("west") && current.getWest() != null){
-                    userGoWest(userChoice);
-                } else if (userChoice.contains("west") && current.getWest() == null) {
-                    System.out.println("You cannot move that direction");
-                } else if (userChoice.contains("north") && current.getNorth()!=null){
-                    userGoNorth(userChoice);
-                }
-                else if (userChoice.contains("north") && current.getNorth()==null){
-                    System.out.println("You cannot move that direction!");
-                }
-                else if (userChoice.contains("south") && current.getSouth()!=null){
-                    userGoSouth(userChoice);
-                }
-                else if (userChoice.contains("south") && current.getSouth()==null){
-                    System.out.println("You cannot move that direction!");
-                }
-
-        } while(!userChoice.contains("exit"));
-
-        System.exit(0);
-        
 
     }
 
-    public void userGoEast(String East){
-        current = current.getEast();
-        choice();
 
-    }
 
-    public void userGoWest(String West){
-        current = current.getWest();
 
-    }
-
-    public void userGoNorth(String North){
-        current = current.getNorth();
-
-    }
-
-    public void userGoSouth(String South){
-        current = current.getSouth();
-
-    }
 
 
 

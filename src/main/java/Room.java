@@ -29,7 +29,7 @@ public class Room {
 
     //Get
     public Room getEast(){
-    return east;
+        return east;
     }
     public Room getWest(){
     return west; }
@@ -44,6 +44,8 @@ public class Room {
     public String getDescription(){
         return description;
     }
+
+
 
 
 }
