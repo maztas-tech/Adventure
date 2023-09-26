@@ -12,6 +12,15 @@ public class UserInterface {
 
         currentInterface = adventure.getCurrent();
 
+        System.out.println("""
+                Welcome to the adventure game!
+                
+                Exit - To exit the program!
+                Help - For a tutorial!
+                Look - To look around in your current room
+                """);
+
+
 
         do {
             System.out.println("Would you like to move or would you like to look around ");
@@ -27,13 +36,12 @@ public class UserInterface {
             }
 
 
-            if (userChoice.contains("look")) {
-                System.out.println(currentInterface.getDescription());
-            } else if (userChoice.contains("east") && currentInterface.getEast() != null) {
+
+            if (userChoice.contains("east") && currentInterface.getEast() != null) {
                 currentInterface = currentInterface.getEast();
             } else if (userChoice.contains("east") && currentInterface.getEast() == null) {
                 System.out.println("You cannot move that direction");
-            } else if (userChoice.contains("west") && currentInterface.getWest() != null) {
+            }else if (userChoice.contains("west") && currentInterface.getWest() != null) {
                 currentInterface = currentInterface.getWest();
             } else if (userChoice.contains("west") && currentInterface.getWest() == null) {
                 System.out.println("You cannot move that direction");
