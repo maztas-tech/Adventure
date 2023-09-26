@@ -18,23 +18,28 @@ public class Adventure {
             "The walls are lined with tall windows, and the sunlight streams in through the glass." +
             " There are several tables and chairs scattered throughout the room, and a few scholars are seated at the tables, reading books and writing notes." +
             " The library is a place of learning and knowledge, but it is also a place where dangerous secrets are hidden.";
+
     String room5Description = "the observatory is a tall and slender tower, made of white stone. " +
             "The windows are tall and narrow, and the roof is topped with a尖塔. " +
             "The observatory is surrounded by a garden, filled with strange and exotic plants." +
             " There is a sense of mystery and magic about the observatory, and it is rumored to be home to a powerful wizard.";
+
     String room6Description = "the laboratory is a large and cluttered room, filled with all sorts of scientific equipment." +
             " The walls are covered with beakers, flasks, and other glassware." +
             " There is a large table in the center of the room, where the experiments take place." +
             " The laboratory is a place of discovery and innovation, but it is also a place where dangerous accidents can happen.";
+
     String room7Description = "the treasury is a vast and opulent room, filled with gold and jewels." +
             " The walls are covered with chests and coffers, and the floor is covered in a thick carpet of gold coins." +
             " There is a large throne in the center of the room, where the ruler of the building sits. " +
             "The treasury is a place of great wealth, but it is also a place of greed and temptation.";
+
     String room8Description = "the throne room is a grand and imposing room, with a high ceiling and marble walls. " +
             "The throne is made of gold and encrusted with jewels. " +
             "There is a red carpet leading up to the throne, and the room is filled with courtiers and guards. " +
             "The king himself is seated on the throne, and he is wearing a golden crown and a red cloak. " +
             "The throne room is a place of power and authority, but it is also a place of intrigue and danger.";
+
     String room9Description = "the secret chamber is a hidden room that is known only to a select few. " +
             "It is located deep within the building, and it is guarded by all sorts of traps and dangers. " +
             "The secret chamber is said to contain the building's greatest treasures, but it is also said to be home to its most dangerous secrets";
