@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        Adventure a = new Adventure();
+        UserInterface u = new UserInterface();
+        u.startProgram();
 
-        a.buildMaze();
     }
 }

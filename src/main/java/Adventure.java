@@ -2,6 +2,11 @@ import java.util.Scanner;
 public class Adventure {
     private Room current;
 
+
+
+    public Room getCurrent(){
+        return current;
+    }
     public void buildMaze() {
         Room room1 = new Room("Room 1", "A room with no distinct features, except two doors.");
         Room room2 = new Room("Room 2", "A dimly lit room with a musty smell.");
