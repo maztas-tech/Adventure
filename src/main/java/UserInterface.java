@@ -16,9 +16,16 @@ public class UserInterface {
         do {
             System.out.println("Would you like to move or would you like to look around ");
             userChoice = keyboard.nextLine().toLowerCase();
-            if (userChoice.contains("help")) {
-                System.out.println("Write east/west/north/south to move in that direction. Write look to look around. Write exit to exit the game");
+            switch (userChoice){
+                case "help":
+                    System.out.println("Write east/west/north/south to move in that direction. " +
+                            "Write look to look around. Write exit to exit the game");
+                    break;
+                case "look":
+                    System.out.println(currentInterface.toString());
+                    break;
             }
+
 
             if (userChoice.contains("look")) {
                 System.out.println(currentInterface.getDescription());
@@ -41,7 +48,7 @@ public class UserInterface {
             }
 
         } while (!userChoice.contains("exit"));
-
+        System.out.println("You will now exit the game!");
         System.exit(0);
     }
 

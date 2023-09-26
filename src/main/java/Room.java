@@ -46,7 +46,11 @@ public class Room {
     }
 
 
-
-
+    @Override
+    public String toString() {
+        return
+                 "You are in " + name + '\n' +
+                 "You see " + description;
+    }
 }
 
