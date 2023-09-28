@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
 public class UserInterface {
-    private Room currentInterface;
-    Adventure adventure = new Adventure();
+    Adventure adventure;
 
     public void startProgram() {
-        adventure.buildMaze();
+        adventure = new Adventure();
+        adventure.buildMap();
+
 
         Scanner keyboard = new Scanner(System.in);
         String userChoice;
 
-        currentInterface = adventure.getCurrent();
 
         System.out.println("""
                 Welcome to the adventure game!
@@ -23,7 +23,7 @@ public class UserInterface {
 
 
         do {
-            System.out.println("Would you like to move or would you like to look around ");
+            System.out.println("Would you like help or would you like to look around ");
             userChoice = keyboard.nextLine().toLowerCase();
             switch (userChoice){
                 case "help":
@@ -31,12 +31,31 @@ public class UserInterface {
                             "Write look to look around. Write exit to exit the game");
                     break;
                 case "look":
-                    System.out.println(currentInterface.toString());
+                    System.out.println(adventure.getCurrentRoom().getDescription());
+                    break;
+            }
+
+            System.out.println("Choose a direction !");
+            String playerMove;
+            playerMove = keyboard.nextLine().toLowerCase();
+
+            switch (playerMove){
+                case "north":
+                    adventure.playerMovement(playerMove);
+                    break;
+                case "west":
+                    adventure.playerMovement(playerMove);
+                    break;
+                case "east":
+                    adventure.playerMovement(playerMove);
+                    break;
+                case "south":
+                    adventure.playerMovement(playerMove);
                     break;
             }
 
 
-
+            /*
             if (userChoice.contains("east") && currentInterface.getEast() != null) {
                 currentInterface = currentInterface.getEast();
             } else if (userChoice.contains("east") && currentInterface.getEast() == null) {
@@ -53,7 +72,7 @@ public class UserInterface {
                 currentInterface = currentInterface.getSouth();
             } else if (userChoice.contains("south") && currentInterface.getSouth() == null) {
                 System.out.println("You cannot move that direction!");
-            }
+            }*/
 
         } while (!userChoice.contains("exit"));
         System.out.println("You will now exit the game!");
