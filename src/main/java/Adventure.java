@@ -29,7 +29,5 @@ public class Adventure {
         return setCurrentRoom(currentRoom);
     }
 
-    public void timer(){
-        player.timer();
-    }
+
 }

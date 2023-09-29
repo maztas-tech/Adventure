@@ -38,6 +38,10 @@ public class Room {
         this.south = south;
     }
 
+    public void setItem(String item) {
+        this.item = item;
+    }
+
     //Get
     public Room getEast(){
         return east;
@@ -59,6 +63,9 @@ public class Room {
         return name;
     }
 
+    public String getItem() {
+        return item;
+    }
 
     @Override
     public String toString() {
