@@ -10,8 +10,6 @@ public class Room {
 
     //TODO Add ArrayList
 
-
-
     public Room(String name, String description, String item) {
         this.name = name;
         this.description = description;
