@@ -1,47 +1,48 @@
 public class Map {
     //Room descriptions
-    String roomDescription1 = "the dungeon is a dark and damp place, filled with the stench of rotting flesh and mildew. " +
-            "The walls are made of rough stone, and the floor is covered in a layer of grime. " +
-            "There are several cells along the walls, and the sound of chains rattling can be heard. " +
+    String roomDescription1 = "the dungeon is a dark and damp place, filled with the stench of rotting flesh and mildew. \n" +
+            "The walls are made of rough stone, and the floor is covered in a layer of grime. \n" +
+            "There are several cells along the walls, and the sound of chains rattling can be heard. \n" +
             "A few torches flicker on the walls, but they do little to dispel the darkness.";
 
-    String roomDescription2 = "the torture chamber is a cold and sterile place, filled with the tools of the trade. " +
-            "The walls are lined with racks, pincers, and other instruments of torture. " +
-            "There is a large table in the center of the room, where the victims are strapped down. " +
+    String roomDescription2 = "the torture chamber is a cold and sterile place, filled with the tools of the trade. \n" +
+            "The walls are lined with racks, pincers, and other instruments of torture. \n" +
+            "There is a large table in the center of the room, where the victims are strapped down. \n" +
             "The torture chamber is a place of suffering and pain, and the screams of the victims can be heard echoing through the halls.";
 
-    String roomDescription3 = "the summoning chamber is a dark and occult place, filled with strange and disturbing symbols. " +
-            "The walls are covered in arcane runes, and the floor is covered in a pentagram. " +
-            "There is a large altar in the center of the room, where the summonings take place. " +
+    String roomDescription3 = "the summoning chamber is a dark and occult place, filled with strange and disturbing symbols. \n" +
+            "The walls are covered in arcane runes, and the floor is covered in a pentagram. \n" +
+            "There is a large altar in the center of the room, where the summonings take place. \n" +
             "The summoning chamber is a place of great power, and it is also a place of great danger.";
-    String roomDescription4 = "the library is a vast and dusty room, filled with shelves and shelves of books. " +
-            "The walls are lined with tall windows, and the sunlight streams in through the glass." +
-            " There are several tables and chairs scattered throughout the room, and a few scholars are seated at the tables, reading books and writing notes." +
+
+    String roomDescription4 = "the library is a vast and dusty room, filled with shelves and shelves of books. \n" +
+            "The walls are lined with tall windows, and the sunlight streams in through the glass.\n" +
+            " There are several tables and chairs scattered throughout the room, and a few scholars are seated at the tables, reading books and writing notes.\n" +
             " The library is a place of learning and knowledge, but it is also a place where dangerous secrets are hidden.";
 
-    String roomDescription5 = "the observatory is a tall and slender tower, made of white stone. " +
-            "The windows are tall and narrow, and the roof is topped with a尖塔. " +
-            "The observatory is surrounded by a garden, filled with strange and exotic plants." +
+    String roomDescription5 = "the observatory is a tall and slender tower, made of white stone. \n" +
+            "The windows are tall and narrow, and the roof is topped with a尖塔. \n" +
+            "The observatory is surrounded by a garden, filled with strange and exotic plants.\n" +
             " There is a sense of mystery and magic about the observatory, and it is rumored to be home to a powerful wizard.";
 
-    String roomDescription6 = "the laboratory is a large and cluttered room, filled with all sorts of scientific equipment." +
-            " The walls are covered with beakers, flasks, and other glassware." +
-            " There is a large table in the center of the room, where the experiments take place." +
+    String roomDescription6 = "the laboratory is a large and cluttered room, filled with all sorts of scientific equipment.\n" +
+            " The walls are covered with beakers, flasks, and other glassware.\n" +
+            " There is a large table in the center of the room, where the experiments take place.\n" +
             " The laboratory is a place of discovery and innovation, but it is also a place where dangerous accidents can happen.";
 
-    String roomDescription7 = "the treasury is a vast and opulent room, filled with gold and jewels." +
-            " The walls are covered with chests and coffers, and the floor is covered in a thick carpet of gold coins." +
-            " There is a large throne in the center of the room, where the ruler of the building sits. " +
-            "The treasury is a place of great wealth, but it is also a place of greed and temptation.";
+    String roomDescription7 = "the treasury is a vast and opulent room, filled with gold and jewels.\n" +
+            " The walls are covered with chests and coffers, and the floor is covered in a thick carpet of gold coins.\n" +
+            " There is a large throne in the center of the room, where the ruler of the building sits. \n" +
+            "The treasury is a place of great wealth, but it is also a place of greed and temptation.\n";
 
-    String roomDescription8 = "the throne room is a grand and imposing room, with a high ceiling and marble walls. " +
-            "The throne is made of gold and encrusted with jewels. " +
-            "There is a red carpet leading up to the throne, and the room is filled with courtiers and guards. " +
-            "The king himself is seated on the throne, and he is wearing a golden crown and a red cloak. " +
+    String roomDescription8 = "the throne room is a grand and imposing room, with a high ceiling and marble walls. \n" +
+            "The throne is made of gold and encrusted with jewels. \n" +
+            "There is a red carpet leading up to the throne, and the room is filled with courtiers and guards. \n" +
+            "The king himself is seated on the throne, and he is wearing a golden crown and a red cloak. \n" +
             "The throne room is a place of power and authority, but it is also a place of intrigue and danger.";
 
-    String roomDescription9 = "the secret chamber is a hidden room that is known only to a select few. " +
-            "It is located deep within the building, and it is guarded by all sorts of traps and dangers. " +
+    String roomDescription9 = "the secret chamber is a hidden room that is known only to a select few. \n" +
+            "It is located deep within the building, and it is guarded by all sorts of traps and dangers. \n" +
             "The secret chamber is said to contain the building's greatest treasures, but it is also said to be home to its most dangerous secrets";
 
     private Room starterRoom;

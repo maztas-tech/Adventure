@@ -21,7 +21,6 @@ public class UserInterface {
                 """);
 
 
-
         do {
             System.out.println("""
                     East -> Go east
