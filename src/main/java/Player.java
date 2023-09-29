@@ -8,6 +8,21 @@ public class Player {
         return currentRoom;
     }
 
+    public void timer(){
+        Thread countdownThread = new Thread();
+        for (int i = 4; i >= 0; i--){
+            System.out.print(i + " ");
+            try{
+                Thread.sleep(400);
+            }catch (Exception e){
+                System.out.println("Error :" + e);
+            }
+        }
+        countdownThread.start();
+    }
+    //TODO Create an ArrayList
+
+
     public void move(String direction){
         switch (direction){
             case "north":

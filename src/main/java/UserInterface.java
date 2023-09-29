@@ -17,13 +17,18 @@ public class UserInterface {
                 
                 Exit - To exit the program!
                 Help - For a tutorial!
-                Look - To look around in your current room
+                Look - To look around in your current room!
                 """);
 
 
 
         do {
-            System.out.println("Would you like help or would you like to look around ");
+            System.out.println("""
+                    East -> Go east
+                    South -> Go south
+                    West -> Go west
+                    North -> Go north
+                    """);
             userChoice = keyboard.nextLine().toLowerCase();
             switch (userChoice){
                 case "help":
@@ -31,48 +36,25 @@ public class UserInterface {
                             "Write look to look around. Write exit to exit the game");
                     break;
                 case "look":
-                    System.out.println(adventure.getCurrentRoom().getDescription());
+                    System.out.println("You are in " + adventure.getCurrentRoom().getName() + " and you see " + adventure.getCurrentRoom().getDescription());
                     break;
-            }
-
-            System.out.println("Choose a direction !");
-            String playerMove;
-            playerMove = keyboard.nextLine().toLowerCase();
-
-            switch (playerMove){
                 case "north":
-                    adventure.playerMovement(playerMove);
+                    adventure.playerMovement(userChoice);
+                    System.out.println("You are now going north...");
                     break;
                 case "west":
-                    adventure.playerMovement(playerMove);
+                    adventure.playerMovement(userChoice);
+                    System.out.println("You are now going west...");
                     break;
                 case "east":
-                    adventure.playerMovement(playerMove);
+                    adventure.playerMovement(userChoice);
+                    System.out.println("You are now going east...");
                     break;
                 case "south":
-                    adventure.playerMovement(playerMove);
+                    adventure.playerMovement(userChoice);
+                    System.out.println("You are now going south...");
                     break;
             }
-
-
-            /*
-            if (userChoice.contains("east") && currentInterface.getEast() != null) {
-                currentInterface = currentInterface.getEast();
-            } else if (userChoice.contains("east") && currentInterface.getEast() == null) {
-                System.out.println("You cannot move that direction");
-            }else if (userChoice.contains("west") && currentInterface.getWest() != null) {
-                currentInterface = currentInterface.getWest();
-            } else if (userChoice.contains("west") && currentInterface.getWest() == null) {
-                System.out.println("You cannot move that direction");
-            } else if (userChoice.contains("north") && currentInterface.getNorth() != null) {
-                currentInterface = currentInterface.getNorth();
-            } else if (userChoice.contains("north") && currentInterface.getNorth() == null) {
-                System.out.println("You cannot move that direction!");
-            } else if (userChoice.contains("south") && currentInterface.getSouth() != null) {
-                currentInterface = currentInterface.getSouth();
-            } else if (userChoice.contains("south") && currentInterface.getSouth() == null) {
-                System.out.println("You cannot move that direction!");
-            }*/
 
         } while (!userChoice.contains("exit"));
         System.out.println("You will now exit the game!");

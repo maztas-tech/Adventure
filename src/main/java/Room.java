@@ -1,12 +1,22 @@
 public class Room {
     private String name;
     private String description;
+    private String item;
     
     private Room east;
     private Room west;
     private Room south;
     private Room north;
 
+    //TODO Add ArrayList
+
+
+
+    public Room(String name, String description, String item) {
+        this.name = name;
+        this.description = description;
+        this.item = item;
+    }
 
     public Room(String name, String description) {
         this.name = name;
@@ -44,6 +54,9 @@ public class Room {
 
     public String getDescription(){
         return description;
+    }
+    public String getName(){
+        return name;
     }
 
 
