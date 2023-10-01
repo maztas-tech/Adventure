@@ -39,19 +39,15 @@ public class UserInterface {
                     break;
                 case "north":
                     adventure.playerMovement(userChoice);
-                    System.out.println("You are now going north...");
                     break;
                 case "west":
                     adventure.playerMovement(userChoice);
-                    System.out.println("You are now going west...");
                     break;
                 case "east":
                     adventure.playerMovement(userChoice);
-                    System.out.println("You are now going east...");
                     break;
                 case "south":
                     adventure.playerMovement(userChoice);
-                    System.out.println("You are now going south...");
                     break;
             }
 

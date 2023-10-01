@@ -17,22 +17,22 @@ public class Map {
 
     String roomDescription4 = "the library is a vast and dusty room, filled with shelves and shelves of books. \n" +
             "The walls are lined with tall windows, and the sunlight streams in through the glass.\n" +
-            " There are several tables and chairs scattered throughout the room, and a few scholars are seated at the tables, reading books and writing notes.\n" +
-            " The library is a place of learning and knowledge, but it is also a place where dangerous secrets are hidden.";
+            "There are several tables and chairs scattered throughout the room, and a few scholars are seated at the tables, reading books and writing notes.\n" +
+            "The library is a place of learning and knowledge, but it is also a place where dangerous secrets are hidden.";
 
     String roomDescription5 = "the observatory is a tall and slender tower, made of white stone. \n" +
             "The windows are tall and narrow, and the roof is topped with a尖塔. \n" +
             "The observatory is surrounded by a garden, filled with strange and exotic plants.\n" +
-            " There is a sense of mystery and magic about the observatory, and it is rumored to be home to a powerful wizard.";
+            "There is a sense of mystery and magic about the observatory, and it is rumored to be home to a powerful wizard.";
 
     String roomDescription6 = "the laboratory is a large and cluttered room, filled with all sorts of scientific equipment.\n" +
-            " The walls are covered with beakers, flasks, and other glassware.\n" +
-            " There is a large table in the center of the room, where the experiments take place.\n" +
-            " The laboratory is a place of discovery and innovation, but it is also a place where dangerous accidents can happen.";
+            "The walls are covered with beakers, flasks, and other glassware.\n" +
+            "There is a large table in the center of the room, where the experiments take place.\n" +
+            "The laboratory is a place of discovery and innovation, but it is also a place where dangerous accidents can happen.";
 
     String roomDescription7 = "the treasury is a vast and opulent room, filled with gold and jewels.\n" +
-            " The walls are covered with chests and coffers, and the floor is covered in a thick carpet of gold coins.\n" +
-            " There is a large throne in the center of the room, where the ruler of the building sits. \n" +
+            "The walls are covered with chests and coffers, and the floor is covered in a thick carpet of gold coins.\n" +
+            "There is a large throne in the center of the room, where the ruler of the building sits. \n" +
             "The treasury is a place of great wealth, but it is also a place of greed and temptation.\n";
 
     String roomDescription8 = "the throne room is a grand and imposing room, with a high ceiling and marble walls. \n" +

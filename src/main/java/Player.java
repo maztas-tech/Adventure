@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Player {
     Room currentRoom;
     public void setCurrentRoom(Room newRoom){
@@ -10,36 +12,38 @@ public class Player {
 
 
     //TODO Create an ArrayList
-
+    ArrayList<Item> playerItemList = new ArrayList<>();
 
     public void move(String direction){
         switch (direction){
             case "north":
                 if (currentRoom.getNorth() != null) {
                     Room northRoom = currentRoom.getNorth();
+                    System.out.println("You are now going north...");
                     currentRoom = northRoom;
                 }else System.out.println("You can't go that way.");
                 break;
             case "south":
-                Room southRoom = currentRoom.getSouth();
-                if (southRoom != null){
-                    currentRoom = currentRoom.getSouth();
+                if (currentRoom.getSouth() != null){
+                    Room southRoom = currentRoom.getSouth();
+                    System.out.println("You are now going south...");
+                    currentRoom = southRoom;
                 }else System.out.println("You can't go that way.");
                 break;
             case "west":
-                Room westRoom = currentRoom.getWest();
-                if (westRoom != null){
+                if (currentRoom.getWest() != null){
+                    Room westRoom = currentRoom.getWest();
+                    System.out.println("You are now going west...");
                     currentRoom = westRoom;
                 }else System.out.println("You can't go that way.");
                 break;
             case "east":
-                Room eastRoom = currentRoom.getEast();
-                if (eastRoom != null){
+                if (currentRoom.getEast() != null){
+                    Room eastRoom = currentRoom.getEast();
+                    System.out.println("You are now going east...");
                     currentRoom = eastRoom;
                 }else System.out.println("You can't go that way.");
                 break;
-
-
         }
     }
 }

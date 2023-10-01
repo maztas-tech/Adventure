@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Room {
     private String name;
     private String description;
@@ -9,6 +11,7 @@ public class Room {
     private Room north;
 
     //TODO Add ArrayList
+    ArrayList<Item> roomItemList = new ArrayList<>();
 
     public Room(String name, String description, String item) {
         this.name = name;
