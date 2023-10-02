@@ -47,14 +47,15 @@ public class Map {
 
     private Room starterRoom;
 
+
     public Room getStarterRoom(){
         return starterRoom;
     }
 
+
+
     public void buildMap() {
         Room room1 = new Room("the Dungeon", roomDescription1);
-        room1.addItem("Red Potion", "Health potion");
-        room1.addItem("map", "An overview of the whole map");
         Room room2 = new Room("the Torture Chamber", roomDescription2);
         Room room3 = new Room("the Summoning Chamber", roomDescription3);
         Room room4 = new Room("the Library", roomDescription4);
@@ -63,6 +64,22 @@ public class Map {
         Room room7 = new Room("the Treasury", roomDescription7);
         Room room8 = new Room("the Throne Room", roomDescription8);
         Room room9 = new Room("the Secret Chamber", roomDescription9);
+
+        //Add items in rooms
+        room1.addItem("potion", "Health potion");
+        room1.addItem("map", "An overview of the whole map");
+
+        room4.addItem("sword", "Long sword");
+        room4.addItem("dagger", "A thiefs weapon");
+
+        room5.addItem("apple", "Apples");
+        room5.addItem("bread", "loaf of bread");
+
+        room6.addItem("dead animal", "Dead mice");
+
+        room7.addItem("gold", "A pile of gold");
+
+
 
         starterRoom = room1;
 
@@ -113,6 +130,5 @@ public class Map {
         room9.setNorth(room6);
 
     }
-
 
 }

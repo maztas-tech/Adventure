@@ -10,6 +10,7 @@ public class UserInterface {
 
         Scanner keyboard = new Scanner(System.in);
         String userChoice;
+        String itemInput;
 
 
         System.out.println("""
@@ -31,15 +32,28 @@ public class UserInterface {
                     break;
                 case "take":
                     System.out.println("Type in the item you want: ");
-                    String itemInput = keyboard.nextLine().toLowerCase();
+                    itemInput = keyboard.nextLine().toLowerCase();
 
-                    if(adventure.takeItem(itemInput)== true){
+                    if(adventure.takeItem(itemInput) == true){
                         System.out.println("You have taken " + itemInput);
                     }else {
                         System.out.println("Such item does not exist!");
                     }
+                    break;
+                case "drop":
+                    System.out.println("Type in the item you want to drop: ");
+                    itemInput = keyboard.nextLine().toLowerCase();
+
+                    if (adventure.dropItem(itemInput) == true){
+                        System.out.println("You have dropped the following item: " + itemInput);
+                    }
+                    else {
+                        System.out.println("You do not have such item! ");
+                    }
                 case "look":
-                    System.out.println("You are in " + adventure.getCurrentRoom().getName() + " and you see " + adventure.getCurrentRoom().getDescription());
+                    System.out.println("You are in " + adventure.getCurrentRoom().getName() +
+                            " and you see " + adventure.getCurrentRoom().getDescription() +
+                            "You see the following items: " + adventure.showItems());
                     break;
                 case "north":
                     adventure.playerMovement(userChoice);

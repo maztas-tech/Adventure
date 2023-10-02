@@ -89,7 +89,8 @@ public class Room {
     public String toString() {
         return
                  "You are in " + name + '\n' +
-                 "You see " + description;
+                 "You see " + description + "\n" +
+                "The following items " + item;
     }
 }
 
