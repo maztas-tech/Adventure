@@ -22,18 +22,22 @@ public class UserInterface {
 
 
         do {
-            System.out.println("""
-                    East -> Go east
-                    South -> Go south
-                    West -> Go west
-                    North -> Go north
-                    """);
+            System.out.println("Awaiting your command");
             userChoice = keyboard.nextLine().toLowerCase();
             switch (userChoice){
                 case "help":
                     System.out.println("Write east/west/north/south to move in that direction. " +
                             "Write look to look around. Write exit to exit the game");
                     break;
+                case "take":
+                    System.out.println("Type in the item you want: ");
+                    String itemInput = keyboard.nextLine().toLowerCase();
+
+                    if(adventure.takeItem(itemInput)== true){
+                        System.out.println("You have taken " + itemInput);
+                    }else {
+                        System.out.println("Such item does not exist!");
+                    }
                 case "look":
                     System.out.println("You are in " + adventure.getCurrentRoom().getName() + " and you see " + adventure.getCurrentRoom().getDescription());
                     break;

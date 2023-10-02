@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Player {
     Room currentRoom;
+
     public void setCurrentRoom(Room newRoom){
         this.currentRoom = newRoom;
     }
@@ -12,7 +13,19 @@ public class Player {
 
 
     //TODO Create an ArrayList
-    ArrayList<Item> playerItemList = new ArrayList<>();
+    ArrayList<Item> itemList = new ArrayList<>();
+
+
+    public boolean takeItem(String name) {
+        Item found = currentRoom.findItem(name);
+        if(found != null){
+            itemList.add(found);
+            currentRoom.removeItem(found);
+            return true;
+        }else {
+            return false;
+        }
+    }
 
     public void move(String direction){
         switch (direction){

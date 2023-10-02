@@ -3,7 +3,7 @@ public class Adventure {
     private Map map;
     private Player player;
 
-    //TODO Add a ArrayList
+
 
     //Constructor
     public Adventure(){
@@ -28,6 +28,20 @@ public class Adventure {
     public Room setCurrentRoom(Room currentRoom){
         return setCurrentRoom(currentRoom);
     }
+
+    public boolean takeItem(String name){
+        return player.takeItem(name);
+    }
+
+    /*
+    public void showItemInRoom(){
+        for (Item item: map.getItemList()) {
+            System.out.println(item);
+            break;
+        }
+    }
+
+     */
 
 
 }

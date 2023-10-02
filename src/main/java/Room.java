@@ -11,7 +11,7 @@ public class Room {
     private Room north;
 
     //TODO Add ArrayList
-    ArrayList<Item> roomItemList = new ArrayList<>();
+    private ArrayList<Item> roomItemList = new ArrayList<>();
 
     public Room(String name, String description, String item) {
         this.name = name;
@@ -39,9 +39,6 @@ public class Room {
         this.south = south;
     }
 
-    public void setItem(String item) {
-        this.item = item;
-    }
 
     //Get
     public Room getEast(){
@@ -68,6 +65,22 @@ public class Room {
         return item;
     }
 
+    public void addItem(String name, String longName){
+        roomItemList.add(new Item(name, longName));
+    }
+
+    public Item findItem(String name){
+        for (Item item: roomItemList) {
+            if(item.getName().contains(name)) {
+                return item;
+            }
+        }
+        return null;
+    }
+
+    public void removeItem(Item item){
+        roomItemList.remove(item);
+    }
     @Override
     public String toString() {
         return

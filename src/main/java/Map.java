@@ -53,13 +53,16 @@ public class Map {
 
     public void buildMap() {
         Room room1 = new Room("the Dungeon", roomDescription1);
-        Room room2 = new Room("the Torture Chamber", roomDescription2, "Sword");
-        Room room3 = new Room("the Summoning Chamber", roomDescription3, "Shield");
+        room1.addItem("Red Potion", "Health potion");
+        room1.addItem("map", "An overview of the whole map");
+        Room room2 = new Room("the Torture Chamber", roomDescription2);
+        Room room3 = new Room("the Summoning Chamber", roomDescription3);
         Room room4 = new Room("the Library", roomDescription4);
+        room4.addItem("Sword", "Long sword");
         Room room5 = new Room("the Observatory", roomDescription5);
-        Room room6 = new Room("the Laboratory", roomDescription6, "Potion");
-        Room room7 = new Room("the Treasury", roomDescription7, "Gold");
-        Room room8 = new Room("the Throne Room", roomDescription8, "Gold");
+        Room room6 = new Room("the Laboratory", roomDescription6);
+        Room room7 = new Room("the Treasury", roomDescription7);
+        Room room8 = new Room("the Throne Room", roomDescription8);
         Room room9 = new Room("the Secret Chamber", roomDescription9);
 
         starterRoom = room1;
