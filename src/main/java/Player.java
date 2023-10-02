@@ -36,6 +36,24 @@ public class Player {
         }
     }
 
+  public boolean dropItem(String name) {
+        Item found = findItem(name);
+        if(found != null){
+            itemList.remove(found);
+            currentRoom.addItem(found);
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public Item showItems(){
+        for (Item item: itemList) {
+            return item;
+        }
+        return null;
+    }
+
     public void move(String direction){
         switch (direction){
             case "north":
