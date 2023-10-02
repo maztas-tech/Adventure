@@ -50,7 +50,6 @@ public class UserInterface {
                     else {
                         System.out.println("You do not have such item! ");
                     }
-                    break;
                 case "look":
                     System.out.println("You are in " + adventure.getCurrentRoom().getName() +
                             " and you see " + adventure.getCurrentRoom().getDescription() +
