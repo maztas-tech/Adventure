@@ -43,6 +43,7 @@ public class UserInterface {
                     break;
                 case "north":
                     adventure.playerMovement(userChoice);
+
                     break;
                 case "west":
                     adventure.playerMovement(userChoice);

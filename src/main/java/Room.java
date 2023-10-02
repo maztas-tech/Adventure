@@ -81,6 +81,10 @@ public class Room {
     public void removeItem(Item item){
         roomItemList.remove(item);
     }
+    public void addItem(Item item){
+        roomItemList.add(item);
+    }
+
     @Override
     public String toString() {
         return

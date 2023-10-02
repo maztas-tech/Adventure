@@ -33,6 +33,14 @@ public class Adventure {
         return player.takeItem(name);
     }
 
+    public boolean dropItem(String name){
+        return player.dropItem(name);
+    }
+
+    public Item showItems(){
+        return player.showItems();
+    }
+
     /*
     public void showItemInRoom(){
         for (Item item: map.getItemList()) {

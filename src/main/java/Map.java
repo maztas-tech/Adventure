@@ -58,7 +58,6 @@ public class Map {
         Room room2 = new Room("the Torture Chamber", roomDescription2);
         Room room3 = new Room("the Summoning Chamber", roomDescription3);
         Room room4 = new Room("the Library", roomDescription4);
-        room4.addItem("Sword", "Long sword");
         Room room5 = new Room("the Observatory", roomDescription5);
         Room room6 = new Room("the Laboratory", roomDescription6);
         Room room7 = new Room("the Treasury", roomDescription7);

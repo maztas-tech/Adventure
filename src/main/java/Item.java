@@ -21,4 +21,8 @@ public class Item {
         this.longName = longName;
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
 }

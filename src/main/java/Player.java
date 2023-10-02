@@ -15,6 +15,15 @@ public class Player {
     //TODO Create an ArrayList
     ArrayList<Item> itemList = new ArrayList<>();
 
+    public Item findItem(String name){
+        for (Item item: itemList) {
+            if(item.getName().contains(name)) {
+                return item;
+            }
+        }
+        return null;
+    }
+
 
     public boolean takeItem(String name) {
         Item found = currentRoom.findItem(name);
