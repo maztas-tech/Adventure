@@ -52,9 +52,9 @@ public class UserInterface {
                     }
                     break;
                 case "look":
-                    System.out.println("You are in " + adventure.getCurrentRoom().getName() +
-                            " and you see " + adventure.getCurrentRoom().getDescription() +
-                            "You see the following items: " + adventure.showItems());
+                    System.out.println("You are in " + adventure.getCurrentRoom().getName() + "\n"+
+                            "You see " + adventure.getCurrentRoom().getDescription() + "\n" +
+                            "You see the following items: \n" + adventure.showItems());
                     break;
                 case "north":
                     adventure.playerMovement(userChoice);

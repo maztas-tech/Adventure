@@ -52,6 +52,7 @@ public class Map {
         return starterRoom;
     }
 
+    ArrayList<Item> itemListMap = new ArrayList<>();
 
 
     public void buildMap() {

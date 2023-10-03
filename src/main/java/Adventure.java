@@ -37,8 +37,12 @@ public class Adventure {
         return player.dropItem(name);
     }
 
-    public Item showItems(){
+    public String showItems(){
         return player.showItems();
+    }
+
+    public Item showItemsMap(){
+        return map.showItems();
     }
 
     /*

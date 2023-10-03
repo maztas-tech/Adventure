@@ -47,12 +47,16 @@ public class Player {
         }
     }
 
-    public Item showItems(){
-        for (Item item: itemList) {
-            return item;
+    public String showItems(){
+        StringBuilder stringBuilder = new StringBuilder("");
+        for (Item item: currentRoom.getItemList()) {
+            stringBuilder.append(item.getName());
+            stringBuilder.append("\n");
         }
-        return null;
+        return stringBuilder.toString();
     }
+
+
 
     public void move(String direction){
         switch (direction){
