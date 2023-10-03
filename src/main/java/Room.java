@@ -85,6 +85,10 @@ public class Room {
         roomItemList.add(item);
     }
 
+    public ArrayList<Item> getItemList(){
+        return roomItemList;
+    }
+
     @Override
     public String toString() {
         return
