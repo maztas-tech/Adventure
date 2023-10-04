@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Map {
     //Room descriptions
     String roomDescription1 = "the dungeon is a dark and damp place, filled with the stench of rotting flesh and mildew. \n" +
@@ -53,6 +55,8 @@ public class Map {
     }
 
     ArrayList<Item> itemListMap = new ArrayList<>();
+
+
 
 
     public void buildMap() {
@@ -132,5 +136,4 @@ public class Map {
         room9.setNorth(room6);
 
     }
-
 }
