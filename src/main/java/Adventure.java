@@ -2,6 +2,7 @@ public class Adventure {
     //Attributes
     private Map map;
     private Player player;
+    private Room room;
 
 
 
@@ -41,19 +42,7 @@ public class Adventure {
         return player.showItems();
     }
 
-    public Item showItemsMap(){
-        return map.showItems();
+    public String showInventory(){
+        return player.showInventory();
     }
-
-    /*
-    public void showItemInRoom(){
-        for (Item item: map.getItemList()) {
-            System.out.println(item);
-            break;
-        }
-    }
-
-     */
-
-
 }

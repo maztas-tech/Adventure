@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Map {
     //Room descriptions
     String roomDescription1 = "the dungeon is a dark and damp place, filled with the stench of rotting flesh and mildew. \n" +
@@ -55,6 +57,8 @@ public class Map {
     ArrayList<Item> itemListMap = new ArrayList<>();
 
 
+
+
     public void buildMap() {
         Room room1 = new Room("the Dungeon", roomDescription1);
         Room room2 = new Room("the Torture Chamber", roomDescription2);
@@ -72,6 +76,7 @@ public class Map {
 
         room4.addItem("sword", "Long sword");
         room4.addItem("dagger", "A thiefs weapon");
+        room4.addItem("shield", "shield");
 
         room5.addItem("apple", "Apples");
         room5.addItem("bread", "loaf of bread");
@@ -131,5 +136,4 @@ public class Map {
         room9.setNorth(room6);
 
     }
-
 }

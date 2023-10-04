@@ -25,6 +25,7 @@ public class Room {
     }
 
 
+
     //Set
     public void setEast(Room east){
         this.east = east;

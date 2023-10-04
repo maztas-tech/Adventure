@@ -15,7 +15,7 @@ public class UserInterface {
 
         System.out.println("""
                 Welcome to the adventure game!
-                
+            
                 Exit - To exit the program!
                 Help - For a tutorial!
                 Look - To look around in your current room!
@@ -34,7 +34,7 @@ public class UserInterface {
                     System.out.println("Type in the item you want: ");
                     itemInput = keyboard.nextLine().toLowerCase();
 
-                    if(adventure.takeItem(itemInput) == true){
+                    if(adventure.takeItem(itemInput)){
                         System.out.println("You have taken " + itemInput);
                     }else {
                         System.out.println("Such item does not exist!");
@@ -44,7 +44,7 @@ public class UserInterface {
                     System.out.println("Type in the item you want to drop: ");
                     itemInput = keyboard.nextLine().toLowerCase();
 
-                    if (adventure.dropItem(itemInput) == true){
+                    if (adventure.dropItem(itemInput)){
                         System.out.println("You have dropped the following item: " + itemInput);
                     }
                     else {
@@ -54,6 +54,9 @@ public class UserInterface {
                     System.out.println("You are in " + adventure.getCurrentRoom().getName() + "\n"+
                             "You see " + adventure.getCurrentRoom().getDescription() + "\n" +
                             "You see the following items: \n" + adventure.showItems());
+                    break;
+                case "inventory":
+                    System.out.println("You have the following items: \n" + adventure.showInventory());
                     break;
                 case "north":
                     adventure.playerMovement(userChoice);
