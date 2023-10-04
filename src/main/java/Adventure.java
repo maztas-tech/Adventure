@@ -40,20 +40,4 @@ public class Adventure {
     public String showItems(){
         return player.showItems();
     }
-
-    public Item showItemsMap(){
-        return map.showItems();
-    }
-
-    /*
-    public void showItemInRoom(){
-        for (Item item: map.getItemList()) {
-            System.out.println(item);
-            break;
-        }
-    }
-
-     */
-
-
 }
