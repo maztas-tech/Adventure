@@ -56,6 +56,15 @@ public class Player {
         return stringBuilder.toString();
     }
 
+    public String showInventory(){
+        StringBuilder stringBuilder = new StringBuilder("");
+        for (Item item: itemList) {
+            stringBuilder.append(item.getName());
+            stringBuilder.append("\n");
+        }
+        return stringBuilder.toString();
+    }
+
 
 
     public void move(String direction){

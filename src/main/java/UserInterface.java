@@ -56,6 +56,9 @@ public class UserInterface {
                             "You see " + adventure.getCurrentRoom().getDescription() + "\n" +
                             "You see the following items: \n" + adventure.showItems());
                     break;
+                case "inventory":
+                    System.out.println("You have the following items: \n" + adventure.showInventory());
+                    break;
                 case "north":
                     adventure.playerMovement(userChoice);
 
