@@ -2,7 +2,6 @@ public class Adventure {
     //Attributes
     private Map map;
     private Player player;
-    private Room room;
 
 
 

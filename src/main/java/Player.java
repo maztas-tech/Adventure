@@ -69,28 +69,28 @@ public class Player {
 
     public void move(String direction){
         switch (direction){
-            case "north":
+            case "north", "n":
                 if (currentRoom.getNorth() != null) {
                     Room northRoom = currentRoom.getNorth();
                     System.out.println("You are now going north...");
                     currentRoom = northRoom;
                 }else System.out.println("You can't go that way.");
                 break;
-            case "south":
+            case "south", "s":
                 if (currentRoom.getSouth() != null){
                     Room southRoom = currentRoom.getSouth();
                     System.out.println("You are now going south...");
                     currentRoom = southRoom;
                 }else System.out.println("You can't go that way.");
                 break;
-            case "west":
+            case "west", "w":
                 if (currentRoom.getWest() != null){
                     Room westRoom = currentRoom.getWest();
                     System.out.println("You are now going west...");
                     currentRoom = westRoom;
                 }else System.out.println("You can't go that way.");
                 break;
-            case "east":
+            case "east", "e":
                 if (currentRoom.getEast() != null){
                     Room eastRoom = currentRoom.getEast();
                     System.out.println("You are now going east...");
