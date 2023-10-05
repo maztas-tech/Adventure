@@ -67,9 +67,7 @@ public class Player {
         for (Item i : itemList) {
             if (i instanceof Food) {
                 return true;
-            }// else {
-            // return false;
-            //}
+            }
         }
         return false;
     }
