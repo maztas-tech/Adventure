@@ -52,7 +52,6 @@ public class Adventure {
     public boolean dropItem(String name){
         return player.dropItem(name);
     }
-
     public String showItems(){
         return player.showItems();
     }

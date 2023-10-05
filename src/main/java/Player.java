@@ -17,7 +17,6 @@ public class Player {
     }
 
 
-
     ArrayList<Item> itemList = new ArrayList<>();
 
     public Item findItem(String name){

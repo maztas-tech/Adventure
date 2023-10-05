@@ -100,4 +100,3 @@ public class Room {
                 "The following items " + item;
     }
 }
-

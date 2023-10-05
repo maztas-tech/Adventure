@@ -79,7 +79,6 @@ public class Map {
         room4.addItem("dagger", "A thiefs weapon");
         room4.addItem("shield", "shield");
 
-
         room5.addFood("bread", "loaf of bread", 20);
 
         room6.addItem("dead animal", "Dead mice");
