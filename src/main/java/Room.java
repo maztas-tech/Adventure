@@ -10,7 +10,6 @@ public class Room {
     private Room south;
     private Room north;
 
-    //TODO Add ArrayList
     private ArrayList<Item> roomItemList = new ArrayList<>();
 
     public Room(String name, String description, String item) {
@@ -68,6 +67,9 @@ public class Room {
 
     public void addItem(String name, String longName){
         roomItemList.add(new Item(name, longName));
+    }
+    public void addFood(String name, String longName, int healthPoints){
+        roomItemList.add(new Food(name, longName, healthPoints));
     }
 
     public Item findItem(String name){

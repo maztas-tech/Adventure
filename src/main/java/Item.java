@@ -1,6 +1,7 @@
 public class Item {
     private String name;
     private String longName;
+    private int healthPoints;
     public Item(String name, String longName){
         this.name = name;
         this.longName = longName;
@@ -8,6 +9,10 @@ public class Item {
     public String getName() {
 
         return name;
+    }
+
+    public int getHealthPoints(){
+        return healthPoints;
     }
     public String getLongName() {
         return longName;

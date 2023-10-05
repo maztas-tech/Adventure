@@ -69,15 +69,18 @@ public class Map {
         Room room9 = new Room("the Secret Chamber", roomDescription9);
 
         //Add items in rooms
-        room1.addItem("potion", "Health potion");
+        room1.addFood("apple", "Apples", 10);
+        room1.addFood("potion", "Health potion", 50);
         room1.addItem("map", "An overview of the whole map");
+
+        room2.addFood("cake", "chocolate cake", 20);
 
         room4.addItem("sword", "Long sword");
         room4.addItem("dagger", "A thiefs weapon");
         room4.addItem("shield", "shield");
 
-        room5.addItem("apple", "Apples");
-        room5.addItem("bread", "loaf of bread");
+
+        room5.addFood("bread", "loaf of bread", 20);
 
         room6.addItem("dead animal", "Dead mice");
 

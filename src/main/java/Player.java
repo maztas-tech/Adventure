@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 
 public class Player {
-    Room currentRoom;
+   private Room currentRoom;
+   private int playerHealth = 100;
 
     public void setCurrentRoom(Room newRoom){
         this.currentRoom = newRoom;
@@ -11,8 +12,12 @@ public class Player {
         return currentRoom;
     }
 
+    public int getPlayerHealth(){
+        return playerHealth;
+    }
 
-    //TODO Create an ArrayList
+
+
     ArrayList<Item> itemList = new ArrayList<>();
 
     public Item findItem(String name){
@@ -64,6 +69,26 @@ public class Player {
         }
         return stringBuilder.toString();
     }
+
+    public boolean inInventory(String name) {
+        Item found = findItem(name);
+        return found != null;
+    }
+
+    public boolean isFood(String name) {
+        for (Item i : itemList) {
+            if (i instanceof Food) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+        public void eat(String name){
+            Item found = findItem(name);
+            playerHealth = playerHealth + found.getHealthPoints();
+            itemList.remove(found);
+        }
 
 
 

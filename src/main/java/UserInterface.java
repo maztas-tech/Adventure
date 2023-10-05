@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class UserInterface {
-    Adventure adventure;
+    private Adventure adventure;
 
     public void startProgram() {
         adventure = new Adventure();
@@ -50,6 +50,24 @@ public class UserInterface {
                     else {
                         System.out.println("You do not have such item! ");
                     }
+                case "eat":
+                    System.out.println("Type in the item you want to eat: ");
+                    itemInput = keyboard.nextLine().toLowerCase();
+
+                    if (adventure.inInventory(itemInput)){
+                        if(adventure.isFood(itemInput)){
+                            adventure.eat(itemInput);
+                            System.out.println("You have eaten the food!");
+
+                        }
+                        else {
+                            System.out.println("This item is not edible");
+                        }
+                    }
+                    else {
+                        System.out.println("You do not have such item! ");
+                    }
+                    break;
                 case "look":
                     System.out.println("You are in " + adventure.getCurrentRoom().getName() + "\n"+
                             "You see " + adventure.getCurrentRoom().getDescription() + "\n");
@@ -57,8 +75,14 @@ public class UserInterface {
                         System.out.println("You see the following items: \n" + adventure.showItems());
                     }
                     break;
+                case "hp":
+                    System.out.println("Your health is " + adventure.getPlayerHealth());
+                    break;
                 case "inventory":
                     System.out.println("You have the following items: \n" + adventure.showInventory());
+                    break;
+                case "health":
+                    System.out.println("You have the following health: ");
                     break;
                 case "north", "n":
                     adventure.playerMovement(userChoice);

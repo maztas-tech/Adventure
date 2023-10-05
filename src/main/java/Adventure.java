@@ -20,6 +20,22 @@ public class Adventure {
         return player.getCurrentRoom();
     }
 
+    public int getPlayerHealth(){
+        return player.getPlayerHealth();
+    }
+
+    public boolean inInventory(String name){
+        return player.inInventory(name);
+    }
+
+    public boolean isFood(String name){
+        return player.isFood(name);
+    }
+
+    public void eat(String name){
+        player.eat(name);
+    }
+
     public void playerMovement(String direction){
         player.move(direction);
 
