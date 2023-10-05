@@ -2,8 +2,11 @@ import java.util.ArrayList;
 
 public class Player {
     Room currentRoom;
+    Status status;
+    //Health of player
+    private int playerHealth = 100;
 
-    public void setCurrentRoom(Room newRoom){
+    public void setCurrentRoom(Room newRoom) {
         this.currentRoom = newRoom;
     }
 
@@ -55,6 +58,7 @@ public class Player {
         return stringBuilder.toString();
     }
 
+
     public String showInventory(){
         StringBuilder stringBuilder = new StringBuilder("");
         for (Item item: itemList) {
@@ -63,6 +67,10 @@ public class Player {
         }
         return stringBuilder.toString();
     }
+
+
+
+
 
 
 

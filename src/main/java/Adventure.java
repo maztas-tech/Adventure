@@ -44,4 +44,8 @@ public class Adventure {
     public String showInventory(){
         return player.showInventory();
     }
+
+
+
+
 }

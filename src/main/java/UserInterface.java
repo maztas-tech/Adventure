@@ -60,6 +60,9 @@ public class UserInterface {
                 case "inventory":
                     System.out.println("You have the following items: \n" + adventure.showInventory());
                     break;
+                case "health":
+                    System.out.println("You have the following health: ");
+                    break;
                 case "north", "n":
                     adventure.playerMovement(userChoice);
                     break;
