@@ -51,11 +51,11 @@ public class UserInterface {
                         System.out.println("You do not have such item! ");
                     }
                 case "look":
+                    System.out.println("You are in " + adventure.getCurrentRoom().getName() + "\n"+
+                            "You see " + adventure.getCurrentRoom().getDescription() + "\n");
                     if(!adventure.showItems().isEmpty()){
                         System.out.println("You see the following items: \n" + adventure.showItems());
                     }
-                    System.out.println("You are in " + adventure.getCurrentRoom().getName() + "\n"+
-                            "You see " + adventure.getCurrentRoom().getDescription() + "\n");
                     break;
                 case "inventory":
                     System.out.println("You have the following items: \n" + adventure.showInventory());
