@@ -12,7 +12,6 @@ public class Player {
     }
 
 
-    //TODO Create an ArrayList
     ArrayList<Item> itemList = new ArrayList<>();
 
     public Item findItem(String name){

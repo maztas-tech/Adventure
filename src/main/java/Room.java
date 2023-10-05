@@ -10,7 +10,7 @@ public class Room {
     private Room south;
     private Room north;
 
-    //TODO Add ArrayList
+
     private ArrayList<Item> roomItemList = new ArrayList<>();
 
     public Room(String name, String description, String item) {
