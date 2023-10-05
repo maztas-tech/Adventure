@@ -84,7 +84,6 @@ public class Player {
     }
 
 
-
     public String showInventory() {
         StringBuilder stringBuilder = new StringBuilder("");
         for (Item item : itemList) {
@@ -93,9 +92,6 @@ public class Player {
         }
         return stringBuilder.toString();
     }
-
-
-
 
 
 
