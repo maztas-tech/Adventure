@@ -4,13 +4,11 @@ public class Room {
     private String name;
     private String description;
     private String item;
-
+    
     private Room east;
     private Room west;
     private Room south;
     private Room north;
-
-    private int healthPoints;
 
 
     private ArrayList<Item> roomItemList = new ArrayList<>();
@@ -48,13 +46,13 @@ public class Room {
         return east;
     }
     public Room getWest(){
-        return west; }
+    return west; }
 
     public Room getNorth(){
-        return north; }
+    return north; }
 
     public Room getSouth(){
-        return south;
+    return south;
     }
 
     public String getDescription(){
@@ -64,17 +62,12 @@ public class Room {
         return name;
     }
 
-
     public String getItem() {
         return item;
     }
-    //Item Metode
+
     public void addItem(String name, String longName){
         roomItemList.add(new Item(name, longName));
-    }
-    //Food Metode
-    public void addFood(String name, String longName, int healthPoints){
-        roomItemList.add(new Food(name, longName, healthPoints));
     }
 
     public Item findItem(String name){
@@ -100,11 +93,9 @@ public class Room {
     @Override
     public String toString() {
         return
-                "You are in " + name + '\n' +
-                        "You see " + description + "\n" +
-                        "The following items " + item;
+                 "You are in " + name + '\n' +
+                 "You see " + description + "\n" +
+                "The following items " + item;
     }
-//item GetItemMetode
-
 }
 

@@ -20,10 +20,6 @@ public class Adventure {
         return player.getCurrentRoom();
     }
 
-    public int getPlayerHealth(){
-        return player.getPlayerHealth();
-    }
-
     public void playerMovement(String direction){
         player.move(direction);
 
@@ -41,24 +37,12 @@ public class Adventure {
         return player.dropItem(name);
     }
 
-    public boolean inInventory(String name){
-        return player.inInventory(name);
-    }
-
-    public boolean isFood(String name){
-        return player.isFood(name);
-    }
-
     public String showItems(){
         return player.showItems();
     }
 
     public String showInventory(){
         return player.showInventory();
-    }
-
-    public void eat(String name){
-        player.eat(name);
     }
 
 
