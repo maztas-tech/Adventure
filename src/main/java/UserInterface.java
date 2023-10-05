@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class UserInterface {
-    private Adventure adventure;
+    Adventure adventure;
 
     public void startProgram() {
         adventure = new Adventure();
@@ -102,6 +102,7 @@ public class UserInterface {
         System.out.println("You will now exit the game!");
         System.exit(0);
     }
+
 
 
 }

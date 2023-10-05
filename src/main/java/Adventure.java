@@ -24,18 +24,6 @@ public class Adventure {
         return player.getPlayerHealth();
     }
 
-    public boolean inInventory(String name){
-        return player.inInventory(name);
-    }
-
-    public boolean isFood(String name){
-        return player.isFood(name);
-    }
-
-    public void eat(String name){
-        player.eat(name);
-    }
-
     public void playerMovement(String direction){
         player.move(direction);
 
@@ -52,6 +40,15 @@ public class Adventure {
     public boolean dropItem(String name){
         return player.dropItem(name);
     }
+
+    public boolean inInventory(String name){
+        return player.inInventory(name);
+    }
+
+    public boolean isFood(String name){
+        return player.isFood(name);
+    }
+
     public String showItems(){
         return player.showItems();
     }
@@ -59,4 +56,12 @@ public class Adventure {
     public String showInventory(){
         return player.showInventory();
     }
+
+    public void eat(String name){
+        player.eat(name);
+    }
+
+
+
+
 }
