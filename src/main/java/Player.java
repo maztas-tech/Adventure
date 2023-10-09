@@ -19,6 +19,7 @@ public class Player {
 
 
     ArrayList<Item> itemList = new ArrayList<>();
+    ArrayList<Item> equippedWeapons = new ArrayList<>();
 
     public Item findItem(String name) {
         for (Item item : itemList) {
@@ -28,6 +29,16 @@ public class Player {
         }
         return null;
     }
+
+    public Item findWeapon(String name) {
+        for (Item item : equippedWeapons) {
+            if (item.getName().contains(name)) {
+                return item;
+            }
+        }
+        return null;
+    }
+
 
 
     public boolean takeItem(String name) {
@@ -47,6 +58,53 @@ public class Player {
         itemList.remove(found);
     }
 
+    public int howManyBullets(){
+        for (Item item : equippedWeapons) {
+            return item.getBullets();
+        }
+        return 0;
+    }
+
+
+    public boolean usable(){
+        for (Item item : equippedWeapons) {
+            return item.canUse();
+        }
+        return false;
+    }
+
+    public int attack() {
+        for (Item item : equippedWeapons) {
+            if (item.getBullets() > 0 ) {
+                item.setBullets(item.getBullets()-1);
+                return item.getDamage();
+            }
+            return item.getDamage();
+
+        }
+        return 0;
+    }
+
+
+    public Boolean isAWeaponEquipped(){
+        if (equippedWeapons.size()>0){
+            return true;
+        }
+        return false;
+    }
+
+    public void equipWeapon(String name){
+        Item found = findItem(name);
+        equippedWeapons.add(found);
+        itemList.remove(found);
+    }
+
+    public void removeWeapon(){
+        Item item = equippedWeapons.get(0);
+        equippedWeapons.remove(item);
+        itemList.add(item);
+    }
+
     public boolean dropItem(String name) {
         Item found = findItem(name);
         if (found != null) {
@@ -63,11 +121,25 @@ public class Player {
         Item found = findItem(name);
         return found != null;
     }
+
+    public boolean inEquippedWeapons(String name) {
+        Item found = findWeapon(name);
+        return found != null;
+    }
     public boolean isFood(String name) {
-        for (Item i : itemList) {
-            if (i instanceof Food) {
-                return true;
-            }
+        Item found = findItem(name);
+        if (found instanceof Food) {
+            return true;
+        }
+        return false;
+    }
+
+
+
+    public boolean isWeapon(String name) {
+        Item found = findItem(name);
+        if (found instanceof Weapon) {
+            return true;
         }
         return false;
     }
@@ -82,6 +154,7 @@ public class Player {
     }
 
 
+
     public String showInventory() {
         StringBuilder stringBuilder = new StringBuilder("");
         for (Item item : itemList) {
@@ -90,6 +163,18 @@ public class Player {
         }
         return stringBuilder.toString();
     }
+
+    public String showWeapons() {
+        StringBuilder stringBuilder = new StringBuilder("");
+        for (Item item : equippedWeapons) {
+            stringBuilder.append(item.getName());
+            stringBuilder.append("\n");
+        }
+        return stringBuilder.toString();
+    }
+
+
+
 
 
 

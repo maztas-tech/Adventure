@@ -45,8 +45,36 @@ public class Adventure {
         return player.inInventory(name);
     }
 
+    public boolean inEquippedWeapons(String name){
+        return player.inEquippedWeapons(name);
+    }
+
+    public boolean isAWeaponEquipped(){
+        return player.isAWeaponEquipped();
+    }
+
+
+    public int attack(){
+        return player.attack();
+    }
+
+    public boolean usable(){
+        return player.usable();
+    }
+
     public boolean isFood(String name){
         return player.isFood(name);
+    }
+
+    public boolean isWeapon(String name){
+        return player.isWeapon(name);
+    }
+    public void equipWeapon(String name){
+        player.equipWeapon(name);
+    }
+
+    public void removeWeapon(){
+        player.removeWeapon();
     }
 
     public String showItems(){
@@ -55,6 +83,14 @@ public class Adventure {
 
     public String showInventory(){
         return player.showInventory();
+    }
+
+    public String showWeapons(){
+        return player.showWeapons();
+    }
+
+    public int howManyBullets(){
+        return player.howManyBullets();
     }
 
     public void eat(String name){

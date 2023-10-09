@@ -77,6 +77,14 @@ public class Room {
         roomItemList.add(new Food(name, longName, healthPoints));
     }
 
+    public void addMeleeWeapon(String name, String longName, int damage){
+        roomItemList.add(new MeleeWeapon(name, longName, damage));
+    }
+
+    public void addRangedWeapon(String name, String longName, int damage, int bullets){
+        roomItemList.add(new RangedWeapon(name, longName, damage, bullets));
+    }
+
     public Item findItem(String name){
         for (Item item: roomItemList) {
             if(item.getName().contains(name)) {

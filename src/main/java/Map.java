@@ -73,8 +73,11 @@ public class Map {
         room1.addFood("apple", "Apples", 10);
         room1.addItem("map", "An overview of the whole map");
 
-        room4.addItem("sword", "Long sword");
-        room4.addFood("bread", "Loaf of bread", 3);
+        room2.addMeleeWeapon("knife", "Huntsman Knife", 20);
+        room2.addRangedWeapon("revolver", "Lucky Luke", 40, 6);
+
+        room4.addMeleeWeapon("sword", "Long sword", 30);
+        room4.addFood("Bread", "Loaf of bread", 3);
         room4.addItem("dagger", "A thiefs weapon");
         room4.addItem("shield", "shield");
 

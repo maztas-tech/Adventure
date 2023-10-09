@@ -50,17 +50,32 @@ public class UserInterface {
                     else {
                         System.out.println("You do not have such item! ");
                     }
+                    break;
+                case "attack":
+                    if (!adventure.isAWeaponEquipped()){
+                        System.out.println("You need a weapon to attack!");
+                    }
+                    else {
+                        if (!adventure.usable()) {
+                            System.out.println("You do not have any bullets left!");
+                        } else {
+                            System.out.println("You dealt " + adventure.attack() + " damage!");
+                            if (adventure.howManyBullets() > 0) {
+                                System.out.println("You have " + adventure.howManyBullets() + " bullets left!");
+                            }
+                        }
+                    }
+                    break;
                 case "eat":
                     System.out.println("Type in the item you want to eat: ");
                     itemInput = keyboard.nextLine().toLowerCase();
 
                     if (adventure.inInventory(itemInput)){
-                        if(adventure.isFood(itemInput)){
+                        if(adventure.isFood(itemInput) == true){
                             adventure.eat(itemInput);
                             System.out.println("You have eaten the food!");
-
                         }
-                        else {
+                        else{
                             System.out.println("This item is not edible");
                         }
                     }
@@ -68,6 +83,17 @@ public class UserInterface {
                         System.out.println("You do not have such item! ");
                     }
                     break;
+                case "bullets":
+                    if (adventure.howManyBullets() > 0)
+                        System.out.println("You have " + adventure.howManyBullets() + " bullets left!");
+                    else if (adventure.usable()) {
+                        System.out.println("This weapon does not use bullets!");
+                    }
+                    if (!adventure.usable()){
+                        System.out.println("You have 0 bullets left");
+                    }
+                    break;
+
                 case "look":
                     System.out.println("You are in " + adventure.getCurrentRoom().getName() + "\n"+
                             "You see " + adventure.getCurrentRoom().getDescription() + "\n");
@@ -83,6 +109,38 @@ public class UserInterface {
                     break;
                 case "health":
                     System.out.println("You have the following health: ");
+                    break;
+                case "weapon":
+                    System.out.println("You have the following weapon equipped: \n" + adventure.showWeapons());
+                    break;
+                case "equip":
+                    if (!adventure.isAWeaponEquipped()) {
+                        System.out.println("Type in the weapon you want to equip:");
+                        itemInput = keyboard.nextLine().toLowerCase();
+                        if (adventure.inInventory(itemInput)) {
+                            if (adventure.isWeapon(itemInput)) {
+                                adventure.equipWeapon(itemInput);
+                                System.out.println("You have equipped your weapon!");
+                            } else {
+                                System.out.println("This item is not a weapon");
+                            }
+                        } else {
+                            System.out.println("You do not have such item! ");
+                        }
+                    }
+                    else {
+                        System.out.println("You can only have one weapon equipped. " +
+                                "Remove your other weapon before equipping a new one!");
+                    }
+                    break;
+                case "remove":
+                    if (adventure.isAWeaponEquipped()) {
+                        adventure.removeWeapon();
+                        System.out.println("You have removed your weapon!");
+                    }
+                    else{
+                        System.out.println("You do not have a weapon equipped!");
+                    }
                     break;
                 case "north", "n":
                     adventure.playerMovement(userChoice);
@@ -102,8 +160,6 @@ public class UserInterface {
         System.out.println("You will now exit the game!");
         System.exit(0);
     }
-
-
 
 }
 
