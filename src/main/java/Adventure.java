@@ -1,7 +1,10 @@
+import java.util.ArrayList;
+
 public class Adventure {
     //Attributes
     private Map map;
     private Player player;
+    private Enemy enemy;
 
 
 
@@ -9,6 +12,7 @@ public class Adventure {
     public Adventure(){
         map = new Map();
         player = new Player();
+        //enemy = new Enemy(enemy.getEnemyName(), enemy.getEnemyDescription(), enemy.getEnemyHealth(), enemy.getEnemyItem());
     }
 
     //Methods
@@ -96,6 +100,27 @@ public class Adventure {
     public void eat(String name){
         player.eat(name);
     }
+
+    public void enemyGetHit(int playerDamage){
+        enemy.enemyGetHit(playerDamage);
+    }
+
+    public int enemyAttack(){
+        return enemy.enemyAttack();
+    }
+
+    public void enemyDropItem(){
+        enemy.enemyItemDrop();
+    }
+
+    public ArrayList<Enemy> showEnemies(){
+        return getCurrentRoom().getEnemy();
+    }
+/*
+    public Enemy enemyHealth(){
+        return true;
+    }
+    */
 
 
 

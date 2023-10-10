@@ -60,6 +60,7 @@ public class UserInterface {
                             System.out.println("You do not have any bullets left!");
                         } else {
                             System.out.println("You dealt " + adventure.attack() + " damage!");
+                            //System.out.println("The troll has " + adventure.enemyHealth() + "hp left");
                             if (adventure.howManyBullets() > 0) {
                                 System.out.println("You have " + adventure.howManyBullets() + " bullets left!");
                             }
@@ -99,6 +100,10 @@ public class UserInterface {
                             "You see " + adventure.getCurrentRoom().getDescription() + "\n");
                     if(!adventure.showItems().isEmpty()){
                         System.out.println("You see the following items: \n" + adventure.showItems());
+                    }
+
+                    if(!adventure.showEnemies().isEmpty()){
+                        System.out.println("You see the following enemies: " + adventure.showEnemies());
                     }
                     break;
                 case "hp":

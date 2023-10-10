@@ -86,11 +86,16 @@ public class Map {
 
         room7.addItem("gold", "A pile of gold");
 
+        MeleeWeapon meleeWeapon1 = new MeleeWeapon("Club", "Rusty club", 5);
+        RangedWeapon rangedWeapon1 = new RangedWeapon("Bow", "Rusty bow", 4, 2);
+
+        room1.addEnemy("Big Troll", "Ugly troll", 50, meleeWeapon1);
+        room1.addEnemy("Small troll", "Ugly troll", 50, rangedWeapon1);
+
+        MeleeWeapon meleeWeapon2 = new MeleeWeapon("Fangs", "Human fangs", 4);
+        room3.addEnemy("Human vampire", "Blood sucking human", 20, meleeWeapon2);
+
         //Food
-
-        //Food apple = new Food("Apple", "A delicious red apple.", 10); // Here, 10 represents the health points gained from eating the apple.
-
-
         starterRoom = room1;
 
         room1.setWest(null);

@@ -14,6 +14,7 @@ public class Room {
 
 
     private ArrayList<Item> roomItemList = new ArrayList<>();
+    private ArrayList<Enemy> enemies = new ArrayList<>();
 
     public Room(String name, String description, String item) {
         this.name = name;
@@ -72,6 +73,7 @@ public class Room {
     public void addItem(String name, String longName){
         roomItemList.add(new Item(name, longName));
     }
+
     //Food Metode
     public void addFood(String name, String longName, int healthPoints){
         roomItemList.add(new Food(name, longName, healthPoints));
@@ -83,6 +85,14 @@ public class Room {
 
     public void addRangedWeapon(String name, String longName, int damage, int bullets){
         roomItemList.add(new RangedWeapon(name, longName, damage, bullets));
+    }
+
+    public void addEnemy(String enemyName, String enemyDescription, int enemyHealth, Item enemyWeapon){
+        enemies.add(new Enemy(enemyName, enemyDescription, enemyHealth, enemyWeapon));
+    }
+
+    public ArrayList<Enemy> getEnemy(){
+        return enemies;
     }
 
     public Item findItem(String name){
@@ -104,6 +114,7 @@ public class Room {
     public ArrayList<Item> getItemList(){
         return roomItemList;
     }
+
 
     @Override
     public String toString() {
