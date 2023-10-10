@@ -73,7 +73,7 @@ public class Map {
         room1.addFood("apple", "Apples", 10);
         room1.addItem("map", "An overview of the whole map");
 
-        room2.addMeleeWeapon("knife", "Huntsman Knife", 20);
+        room1.addMeleeWeapon("knife", "Huntsman Knife", 50);
         room2.addRangedWeapon("revolver", "Lucky Luke", 40, 6);
 
         room4.addMeleeWeapon("sword", "Long sword", 30);
@@ -86,8 +86,8 @@ public class Map {
 
         room7.addItem("gold", "A pile of gold");
 
-        MeleeWeapon meleeWeapon1 = new MeleeWeapon("Club", "Rusty club", 5);
-        RangedWeapon rangedWeapon1 = new RangedWeapon("Bow", "Rusty bow", 4, 2);
+        MeleeWeapon meleeWeapon1 = new MeleeWeapon("club", "Rusty club", 5);
+        RangedWeapon rangedWeapon1 = new RangedWeapon("bow", "Rusty bow", 4, 2);
 
         room1.addEnemy("Big Troll", "Ugly troll", 50, meleeWeapon1);
         room1.addEnemy("Small troll", "Ugly troll", 50, rangedWeapon1);

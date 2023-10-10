@@ -95,6 +95,15 @@ public class Room {
         return enemies;
     }
 
+    public Enemy getSpecificEnemy(String name){
+        for (Enemy enemy: enemies) {
+            if(enemy.getEnemyName().contains(name)){
+                return enemy;
+            }
+        }
+        return null;
+    }
+
     public Item findItem(String name){
         for (Item item: roomItemList) {
             if(item.getName().contains(name)) {
@@ -113,6 +122,10 @@ public class Room {
 
     public ArrayList<Item> getItemList(){
         return roomItemList;
+    }
+
+    public void removeDeadEnemy(String name){
+        enemies.remove(getSpecificEnemy(name));
     }
 
 

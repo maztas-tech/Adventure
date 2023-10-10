@@ -116,11 +116,21 @@ public class Adventure {
     public ArrayList<Enemy> showEnemies(){
         return getCurrentRoom().getEnemy();
     }
-/*
-    public Enemy enemyHealth(){
-        return true;
+
+    public int enemyCurrentHealth(){
+        return enemy.getEnemyHealth();
     }
-    */
+
+    public Enemy getSpecificEnemy(String name){
+        return getCurrentRoom().getSpecificEnemy(name);
+    }
+
+    public void removeDeadEnemy(String name){
+        getCurrentRoom().removeDeadEnemy(name);
+    }
+
+
+
 
 
 

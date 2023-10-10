@@ -11,6 +11,7 @@ public class UserInterface {
         Scanner keyboard = new Scanner(System.in);
         String userChoice;
         String itemInput;
+        String enemyInput;
 
 
         System.out.println("""
@@ -52,6 +53,10 @@ public class UserInterface {
                     }
                     break;
                 case "attack":
+                    System.out.println("Choose an enemy you would like to attack: ");
+                    enemyInput = keyboard.nextLine();
+                    adventure.getSpecificEnemy(enemyInput);
+                    System.out.println("You choose: ");
                     if (!adventure.isAWeaponEquipped()){
                         System.out.println("You need a weapon to attack!");
                     }
@@ -59,8 +64,18 @@ public class UserInterface {
                         if (!adventure.usable()) {
                             System.out.println("You do not have any bullets left!");
                         } else {
+                            System.out.println("The enemy has " + adventure.getSpecificEnemy(enemyInput) + " hp");
                             System.out.println("You dealt " + adventure.attack() + " damage!");
-                            //System.out.println("The troll has " + adventure.enemyHealth() + "hp left");
+                            adventure.getSpecificEnemy(enemyInput).enemyGetHit(adventure.attack());
+
+                            System.out.println("The enemy has " + adventure.getSpecificEnemy(enemyInput).getEnemyHealth() + " hp left");
+                            if (adventure.getSpecificEnemy(enemyInput).getEnemyHealth() <= 0){
+
+                                adventure.getSpecificEnemy(enemyInput);
+                                adventure.getCurrentRoom().addItem(adventure.getSpecificEnemy(enemyInput).getEnemyItem());
+                                System.out.println("The enemy has dropped its weapon. Type 'look' to see");
+                                adventure.getCurrentRoom().removeDeadEnemy(enemyInput);
+                            }
                             if (adventure.howManyBullets() > 0) {
                                 System.out.println("You have " + adventure.howManyBullets() + " bullets left!");
                             }
