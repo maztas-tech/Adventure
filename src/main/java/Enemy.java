@@ -62,7 +62,7 @@ public class Enemy {
     public void enemyItemDrop(){
         getCurrentRoom.getCurrentRoom().addItem(enemyItem);
     }
-
+    
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
