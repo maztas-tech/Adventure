@@ -4,7 +4,7 @@ public class Adventure {
     //Attributes
     private Map map;
     private Player player;
-    private Enemy enemy;
+
 
 
 
@@ -32,9 +32,6 @@ public class Adventure {
 
     }
 
-    public Room setCurrentRoom(Room currentRoom){
-        return setCurrentRoom(currentRoom);
-    }
 
     public boolean takeItem(String name){
         return player.takeItem(name);
@@ -111,9 +108,6 @@ public class Adventure {
         player.playerGetHit(enemyDamage);
     }
 
-    public Item getEnemyItem(){
-        return enemy.getEnemyItem();
-    }
 
     public void useABullet(){
         player.useABullet();

@@ -127,7 +127,6 @@ public class Room {
                         "You see " + description + "\n" +
                         "The following items " + item;
     }
-//item GetItemMetode
 
 }
 

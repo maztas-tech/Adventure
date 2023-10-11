@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Player {
     Room currentRoom;
-    //Health of player
+
     private int playerHealth = 100;
 
     public void setCurrentRoom(Room newRoom) {
@@ -125,10 +125,7 @@ public class Player {
         return found != null;
     }
 
-    public boolean inEquippedWeapons(String name) {
-        Item found = findWeapon(name);
-        return found != null;
-    }
+
     public boolean isFood(String name) {
         Item found = findItem(name);
         if (found instanceof Food) {
@@ -198,7 +195,7 @@ public class Player {
                 if (currentRoom.getSouth() != null) {
                     Room southRoom = currentRoom.getSouth();
 
-                   // System.out.println("You are now going south...");
+
                     currentRoom = southRoom;
                     return true;
                 } else return false;

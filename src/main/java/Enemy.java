@@ -20,9 +20,6 @@ public class Enemy {
         return enemyName;
     }
 
-    public String getEnemyDescription() {
-        return enemyDescription;
-    }
 
     public int getEnemyHealth() {
         return enemyHealth;
@@ -32,23 +29,7 @@ public class Enemy {
         return enemyItem;
     }
 
-    //Setter
 
-    public void setEnemyName(String enemyName) {
-        this.enemyName = enemyName;
-    }
-
-    public void setEnemyDescription(String enemyDescription) {
-        this.enemyDescription = enemyDescription;
-    }
-
-    public void setEnemyHealth(int enemyHealth) {
-        this.enemyHealth = enemyHealth;
-    }
-
-    public void setEnemyItem(Item enemyItem) {
-        this.enemyItem = enemyItem;
-    }
 
     //Service methods
     public void enemyGetHit(int playerDamage){
@@ -66,10 +47,12 @@ public class Enemy {
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        return enemyName + '\'' +
-                ", enemyDescription='" + enemyDescription + '\'' +
-                ", enemyHealth=" + enemyHealth +
-                ", enemyItem=" + enemyItem +
-                '}';
+        stringBuilder.append("\nYou see the following enemies: \n");
+        stringBuilder.append("Enemy: " + enemyName + "\n");
+        stringBuilder.append("Enemy type: " + enemyDescription + "\n");
+        stringBuilder.append("Enemy health: " + enemyHealth + "\n");
+        stringBuilder.append("Enemy weapon: " + enemyItem + "\n");
+
+        return stringBuilder.toString();
     }
 }

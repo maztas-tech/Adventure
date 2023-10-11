@@ -41,5 +41,5 @@ public class Item {
     public String toString() {
         return name;
     }
-//health point metode
+
 }
