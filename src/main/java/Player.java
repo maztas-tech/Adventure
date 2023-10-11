@@ -29,18 +29,7 @@ public class Player {
         }
         return null;
     }
-
-    public Item findWeapon(String name) {
-        for (Item item : equippedWeapons) {
-            if (item.getName().contains(name)) {
-                return item;
-            }
-        }
-        return null;
-    }
-
-
-
+    
     public boolean takeItem(String name) {
         Item found = currentRoom.findItem(name);
         if (found != null) {
@@ -202,7 +191,6 @@ public class Player {
             case "west", "w":
                 if (currentRoom.getWest() != null) {
                     Room westRoom = currentRoom.getWest();
-                    System.out.println("You are now going west...");
                     currentRoom = westRoom;
                     return true;
                 } else return false;
