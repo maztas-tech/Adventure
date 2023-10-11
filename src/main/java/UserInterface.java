@@ -115,6 +115,11 @@ public class UserInterface {
                         if(adventure.isFood(itemInput) == true){
                             adventure.eat(itemInput);
                             System.out.println("You have eaten the food!");
+                            System.out.println("Your hp is now " + adventure.getPlayerHealth());
+                            if (adventure.getPlayerHealth() < 1){
+                                System.out.println("You died! Game over");
+                                userChoice = "exit";
+                            }
                         }
                         else{
                             System.out.println("This item is not edible");
