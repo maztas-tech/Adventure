@@ -35,17 +35,7 @@ public class Item {
 
 
 
-    public String getLongName() {
-        return longName;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setLongName(String longName) {
-        this.longName = longName;
-    }
 
     @Override
     public String toString() {

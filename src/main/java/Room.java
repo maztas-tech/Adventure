@@ -10,17 +10,11 @@ public class Room {
     private Room south;
     private Room north;
 
-    private int healthPoints;
 
 
     private ArrayList<Item> roomItemList = new ArrayList<>();
     private ArrayList<Enemy> enemies = new ArrayList<>();
 
-    public Room(String name, String description, String item) {
-        this.name = name;
-        this.description = description;
-        this.item = item;
-    }
 
     public Room(String name, String description) {
         this.name = name;
@@ -66,9 +60,6 @@ public class Room {
     }
 
 
-    public String getItem() {
-        return item;
-    }
     //Item Metode
     public void addItem(String name, String longName){
         roomItemList.add(new Item(name, longName));

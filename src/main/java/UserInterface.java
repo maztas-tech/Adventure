@@ -64,7 +64,7 @@ public class UserInterface {
                     break;
                 case "attack":
                     System.out.println("Choose an enemy you would like to attack: ");
-                    enemyInput = keyboard.nextLine();
+                    enemyInput = keyboard.nextLine().toLowerCase();
                     adventure.getSpecificEnemy(enemyInput);
                     System.out.println("You choose: ");
                     if (!adventure.isAWeaponEquipped()){
@@ -138,7 +138,7 @@ public class UserInterface {
                     }
 
                     if(!adventure.showEnemies().isEmpty()){
-                        System.out.println("You see the following enemies: " + adventure.showEnemies());
+                        System.out.println(adventure.showEnemies());
                     }
                     break;
                 case "hp":

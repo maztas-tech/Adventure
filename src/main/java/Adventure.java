@@ -12,7 +12,6 @@ public class Adventure {
     public Adventure(){
         map = new Map();
         player = new Player();
-        //enemy = new Enemy(enemy.getEnemyName(), enemy.getEnemyDescription(), enemy.getEnemyHealth(), enemy.getEnemyItem());
     }
 
     //Methods
@@ -47,10 +46,6 @@ public class Adventure {
 
     public boolean inInventory(String name){
         return player.inInventory(name);
-    }
-
-    public boolean inEquippedWeapons(String name){
-        return player.inEquippedWeapons(name);
     }
 
     public boolean isAWeaponEquipped(){
@@ -101,33 +96,16 @@ public class Adventure {
         player.eat(name);
     }
 
-    public void enemyGetHit(int playerDamage){
-        enemy.enemyGetHit(playerDamage);
-    }
-
-    public int enemyAttack(){
-        return enemy.enemyAttack();
-    }
-
-    public void enemyDropItem(){
-        enemy.enemyItemDrop();
-    }
 
     public ArrayList<Enemy> showEnemies(){
         return getCurrentRoom().getEnemy();
     }
 
-    public int enemyCurrentHealth(){
-        return enemy.getEnemyHealth();
-    }
 
     public Enemy getSpecificEnemy(String name){
         return getCurrentRoom().getSpecificEnemy(name);
     }
 
-    public void removeDeadEnemy(String name){
-        getCurrentRoom().removeDeadEnemy(name);
-    }
 
     public void playerGetHit(int enemyDamage){
         player.playerGetHit(enemyDamage);

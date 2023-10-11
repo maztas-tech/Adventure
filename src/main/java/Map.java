@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Map {
     //Room descriptions
     String roomDescription1 = "the dungeon is a dark and damp place, filled with the stench of rotting flesh and mildew. \n" +
@@ -86,14 +84,14 @@ public class Map {
 
         room7.addItem("gold", "A pile of gold");
 
-        MeleeWeapon meleeWeapon1 = new MeleeWeapon("club", "Rusty club", 5);
-        RangedWeapon rangedWeapon1 = new RangedWeapon("bow", "Rusty bow", 4, 2);
+        MeleeWeapon meleeWeapon1 = new MeleeWeapon("club", "rusty club", 5);
+        RangedWeapon rangedWeapon1 = new RangedWeapon("bow", "rusty bow", 4, 2);
 
-        room1.addEnemy("Big Troll", "Ugly troll", 50, meleeWeapon1);
-        room1.addEnemy("Small troll", "Ugly troll", 50, rangedWeapon1);
+        room1.addEnemy("big troll", "troll", 50, meleeWeapon1);
+        room1.addEnemy("small troll", "troll", 50, rangedWeapon1);
 
-        MeleeWeapon meleeWeapon2 = new MeleeWeapon("Fangs", "Human fangs", 4);
-        room3.addEnemy("Human vampire", "Blood sucking human", 20, meleeWeapon2);
+        MeleeWeapon meleeWeapon2 = new MeleeWeapon("fangs", "human fangs", 4);
+        room3.addEnemy("human vampire", "blood sucking human", 20, meleeWeapon2);
 
         //Food
         starterRoom = room1;
