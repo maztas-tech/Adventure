@@ -80,7 +80,7 @@ public class Map {
         room4.addItem("shield", "shield");
 
 
-        room6.addItem("dead animal", "Dead mice");
+        room1.addFood("dead animal", "Dead mice", -500);
 
         room9.addItem("gold", "A pile of gold");
 
