@@ -20,6 +20,17 @@ public class UserInterface {
                 Exit - To exit the program!
                 Help - For a tutorial!
                 Look - To look around in your current room!
+                Take - takes an item in the current room you are in
+                Drop - drops item in inventory
+                Attack - attacks the desired enemy in the current room you are in
+                Eat - eats an edible item
+                Bullets - checks how many bullets you have left
+                Inventory - see all the items you have in your inventory
+                HP - shows your current health
+                Weapon - displays your current weapon
+                Equip - equip a weapon in your inventory
+                Remove - remove your equipped weapon back into inventory
+                
                 """);
 
 
@@ -136,9 +147,6 @@ public class UserInterface {
                     break;
                 case "inventory":
                     System.out.println("You have the following items: \n" + adventure.showInventory());
-                    break;
-                case "health":
-                    System.out.println("You have the following health: ");
                     break;
                 case "weapon":
                     System.out.println("You have the following weapon equipped: \n" + adventure.showWeapons());
