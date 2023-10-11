@@ -29,7 +29,7 @@ public class Player {
         }
         return null;
     }
-    
+
     public boolean takeItem(String name) {
         Item found = currentRoom.findItem(name);
         if (found != null) {

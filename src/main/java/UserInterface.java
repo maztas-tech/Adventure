@@ -170,6 +170,9 @@ public class UserInterface {
                                 "Remove your other weapon before equipping a new one!");
                     }
                     break;
+                case "damage", "dmg":
+                    System.out.println("Your weapon deals " + adventure.attack());
+                    break;
                 case "remove":
                     if (adventure.isAWeaponEquipped()) {
                         adventure.removeWeapon();
