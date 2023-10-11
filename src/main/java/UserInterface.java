@@ -92,6 +92,10 @@ public class UserInterface {
                                 adventure.playerGetHit(adventure.getSpecificEnemy(enemyInput).getEnemyItem().getDamage());
                                 System.out.println("You have " + adventure.getPlayerHealth() + " hp left");
                                 System.out.println("The enemy dealt " + adventure.getSpecificEnemy(enemyInput).getEnemyItem().getDamage() + " damage");
+                                if (adventure.getPlayerHealth() < 1){
+                                    System.out.println("You died! Game over");
+                                    userChoice = "exit";
+                                }
                             }
                             if (adventure.getSpecificEnemy(enemyInput).getEnemyHealth() <= 0) {
 
