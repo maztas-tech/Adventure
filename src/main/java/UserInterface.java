@@ -30,6 +30,7 @@ public class UserInterface {
                 Weapon - displays your current weapon
                 Equip - equip a weapon in your inventory
                 Remove - remove your equipped weapon back into inventory
+                Damage - shows the amount of damage you give
                 """);
 
 
