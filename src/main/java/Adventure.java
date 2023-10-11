@@ -129,10 +129,16 @@ public class Adventure {
         getCurrentRoom().removeDeadEnemy(name);
     }
 
+    public void playerGetHit(int enemyDamage){
+        player.playerGetHit(enemyDamage);
+    }
 
+    public Item getEnemyItem(){
+        return enemy.getEnemyItem();
+    }
 
-
-
-
+    public void useABullet(){
+        player.useABullet();
+    }
 
 }

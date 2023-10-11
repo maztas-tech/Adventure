@@ -175,7 +175,9 @@ public class Player {
 
 
 
-
+    public void playerGetHit(int enemyDamage){
+        playerHealth = playerHealth - enemyDamage;
+    }
 
 
     public void move(String direction) {

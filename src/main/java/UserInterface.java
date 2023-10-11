@@ -64,12 +64,25 @@ public class UserInterface {
                         if (!adventure.usable()) {
                             System.out.println("You do not have any bullets left!");
                         } else {
+
+                            //Enemy health loss
                             System.out.println("The enemy has " + adventure.getSpecificEnemy(enemyInput) + " hp");
                             System.out.println("You dealt " + adventure.attack() + " damage!");
                             adventure.getSpecificEnemy(enemyInput).enemyGetHit(adventure.attack());
 
                             System.out.println("The enemy has " + adventure.getSpecificEnemy(enemyInput).getEnemyHealth() + " hp left");
-                            if (adventure.getSpecificEnemy(enemyInput).getEnemyHealth() <= 0){
+                            if (adventure.howManyBullets() > 0) {
+                                adventure.useABullet();
+                                System.out.println("You have " + adventure.howManyBullets() + " bullets left!");
+                            }
+
+                            //Player health loss
+                            if (adventure.getSpecificEnemy(enemyInput).getEnemyHealth() > 0) {
+                                adventure.playerGetHit(adventure.getSpecificEnemy(enemyInput).getEnemyItem().getDamage());
+                                System.out.println("You have " + adventure.getPlayerHealth() + " hp left");
+                                System.out.println("The enemy dealt " + adventure.getSpecificEnemy(enemyInput).getEnemyItem().getDamage() + " damage");
+                            }
+                            if (adventure.getSpecificEnemy(enemyInput).getEnemyHealth() <= 0) {
 
                                 adventure.getSpecificEnemy(enemyInput);
                                 adventure.getCurrentRoom().addItem(adventure.getSpecificEnemy(enemyInput).getEnemyItem());
