@@ -205,15 +205,15 @@ public class Player {
                     Room westRoom = currentRoom.getWest();
                     System.out.println("You are now going west...");
                     currentRoom = westRoom;
-                } else System.out.println("You can't go that way.");
-                break;
+                    return true;
+                } else return false;
+
             case "east", "e":
                 if (currentRoom.getEast() != null) {
                     Room eastRoom = currentRoom.getEast();
-                    System.out.println("You are now going east...");
                     currentRoom = eastRoom;
-                } else System.out.println("You can't go that way.");
-                break;
+                    return true;
+                } else return false;
         }
     }
 }

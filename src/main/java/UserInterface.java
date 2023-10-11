@@ -16,7 +16,7 @@ public class UserInterface {
 
         System.out.println("""
                 Welcome to the adventure game!
-            
+                            
                 Exit - To exit the program!
                 Help - For a tutorial!
                 Look - To look around in your current room!
@@ -30,7 +30,6 @@ public class UserInterface {
                 Weapon - displays your current weapon
                 Equip - equip a weapon in your inventory
                 Remove - remove your equipped weapon back into inventory
-                
                 """);
 
 
@@ -187,10 +186,19 @@ public class UserInterface {
                     adventure.playerMovement(userChoice);
                     break;
                 case "east", "e":
-                    adventure.playerMovement(userChoice);
+                    if (!adventure.playerMovement(userChoice)){
+                        System.out.println("You cannot go that way!");
+                    }else {
+                        System.out.println("You are now going east...");
+                    }
+
                     break;
                 case "south", "s":
-                    adventure.playerMovement(userChoice);
+                    if (!adventure.playerMovement(userChoice)){
+                        System.out.println("You cannot go that way!");
+                    }else {
+                        System.out.println("You are now going south...");
+                    }
                     break;
             }
 
