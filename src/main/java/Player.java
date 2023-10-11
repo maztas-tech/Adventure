@@ -75,14 +75,17 @@ public class Player {
 
     public int attack() {
         for (Item item : equippedWeapons) {
-            if (item.getBullets() > 0 ) {
-                item.setBullets(item.getBullets()-1);
-                return item.getDamage();
-            }
             return item.getDamage();
-
         }
         return 0;
+    }
+
+
+
+    public void useABullet(){
+        for (Item item : equippedWeapons){
+            item.setBullets(item.getBullets()-1);
+        }
     }
 
 

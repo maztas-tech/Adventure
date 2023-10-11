@@ -89,9 +89,6 @@ public class UserInterface {
                                 System.out.println("The enemy has dropped its weapon. Type 'look' to see");
                                 adventure.getCurrentRoom().removeDeadEnemy(enemyInput);
                             }
-                            if (adventure.howManyBullets() > 0) {
-                                System.out.println("You have " + adventure.howManyBullets() + " bullets left!");
-                            }
                         }
                     }
                     break;
@@ -192,6 +189,8 @@ public class UserInterface {
         } while (!userChoice.contains("exit"));
         System.out.println("You will now exit the game!");
         System.exit(0);
+
+
     }
 
 }
