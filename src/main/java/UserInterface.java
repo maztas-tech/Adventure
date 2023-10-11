@@ -180,10 +180,19 @@ public class UserInterface {
                     }
                     break;
                 case "north", "n":
-                    adventure.playerMovement(userChoice);
+                    if (!adventure.playerMovement(userChoice)){
+                        System.out.println("You cannot go that way!");
+                    }else {
+                        System.out.println("You are now going north...");
+                    }
                     break;
+
                 case "west", "w":
-                    adventure.playerMovement(userChoice);
+                    if (!adventure.playerMovement(userChoice)){
+                        System.out.println("You cannot go that way!");
+                    }else {
+                        System.out.println("You are now going west...");
+                    }
                     break;
                 case "east", "e":
                     if (!adventure.playerMovement(userChoice)){

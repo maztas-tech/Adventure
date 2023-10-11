@@ -28,8 +28,8 @@ public class Adventure {
         return player.getPlayerHealth();
     }
 
-    public void playerMovement(String direction){
-        player.move(direction);
+    public boolean playerMovement(String direction){
+        return player.move(direction);
 
     }
 
