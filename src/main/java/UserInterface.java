@@ -15,24 +15,25 @@ public class UserInterface {
 
 
         System.out.println("""
-                Welcome to the adventure game!
-                            
-                Exit - To exit the program!
-                Help - For a tutorial!
-                Look - To look around in your current room!
-                Take - takes an item in the current room you are in
-                Drop - drops item in inventory
-                Attack - attacks the desired enemy in the current room you are in
-                Eat - eats an edible item
-                Bullets - checks how many bullets you have left
-                Inventory - see all the items you have in your inventory
-                HP - shows your current health
-                Weapon - displays your current weapon
-                Equip - equip a weapon in your inventory
-                Remove - remove your equipped weapon back into inventory
-                Damage - shows the amount of damage you give
-                """);
-
+    Welcome to the adventure game!
+    
+    Write east/west/north/south to move in that direction. Write look to look around. Write exit to exit the game
+    
+    Exit - To exit the program!
+    Help - For a tutorial!
+    Look - To look around in your current room!
+    Take - takes an item in the current room you are in
+    Drop - drops item in inventory
+    Attack - attacks the desired enemy in the current room you are in
+    Eat - eats an edible item
+    Bullets - checks how many bullets you have left
+    Inventory - see all the items you have in your inventory
+    HP - shows your current health
+    Weapon - displays your current weapon
+    Equip - equip a weapon in your inventory
+    Remove - remove your equipped weapon back into inventory
+    Damage - shows the amount of damage you give
+""");
 
         do {
             System.out.println("Awaiting your command");
