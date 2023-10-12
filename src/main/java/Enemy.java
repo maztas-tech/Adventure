@@ -34,7 +34,6 @@ public class Enemy {
     }
 
 
-
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
