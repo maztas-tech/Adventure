@@ -4,9 +4,6 @@ public class Enemy {
     private int enemyHealth;
     private Item enemyItem;
 
-    Player getCurrentRoom = new Player();
-
-
 
     public Enemy(String enemyName, String enemyDescription, int enemyHealth, Item enemyItem){
         this.enemyName = enemyName;
@@ -36,14 +33,8 @@ public class Enemy {
         enemyHealth = getEnemyHealth() - playerDamage;
     }
 
-    public int enemyAttack(){
-        return enemyItem.getDamage();
-    }
 
-    public void enemyItemDrop(){
-        getCurrentRoom.getCurrentRoom().addItem(enemyItem);
-    }
-    
+
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
