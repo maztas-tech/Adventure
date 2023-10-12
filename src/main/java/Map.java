@@ -48,11 +48,9 @@ public class Map {
     private Room starterRoom;
 
 
-    public Room getStarterRoom(){
+    public Room getStarterRoom() {
         return starterRoom;
     }
-
-
 
 
     public void buildMap() {
@@ -67,31 +65,106 @@ public class Map {
         Room room9 = new Room("the Secret Chamber", roomDescription9);
 
         //Add items in rooms
+
+        //room 1
         room1.addFood("potion", "Health potion", 50);
         room1.addFood("apple", "Apples", 10);
         room1.addItem("map", "An overview of the whole map");
-
         room1.addMeleeWeapon("knife", "Huntsman Knife", 20);
-        room1.addRangedWeapon("revolver", "Lucky Luke", 15, 6);
-
-        room4.addMeleeWeapon("sword", "Long sword", 30);
-        room4.addFood("Bread", "Loaf of bread", 3);
-        room4.addItem("dagger", "A thiefs weapon");
-        room4.addItem("shield", "shield");
-
-
-        room1.addFood("dead animal", "Dead mice", -500);
-
-        room9.addItem("gold", "A pile of gold");
-
+        room1.addRangedWeapon("revolver", "Lucky Luke", 35, 6);
+        room1.addFood("dead animal", "Dead mice of instant death", -500);
         MeleeWeapon meleeWeapon1 = new MeleeWeapon("club", "rusty club", 5);
         RangedWeapon rangedWeapon1 = new RangedWeapon("bow", "rusty bow", 4, 2);
-
         room1.addEnemy("big troll", "troll", 50, meleeWeapon1);
-        room1.addEnemy("small troll", "troll", 50, rangedWeapon1);
+        room1.addEnemy("small troll", "troll", 25, rangedWeapon1);
 
-        MeleeWeapon meleeWeapon2 = new MeleeWeapon("fangs", "human fangs", 4);
-        room3.addEnemy("human vampire", "blood sucking human", 20, meleeWeapon2);
+
+        //room 2
+        room2.addFood("magic potion", "Magic Potion of Restoration", 60);
+        room2.addItem("ancient tome", "Ancient Tome of Spells");
+        room2.addMeleeWeapon("sword", "Mystic Sword of Valor", 30);
+        room2.addFood("enchanted fruit", "Enchanted Fruit of Life", 40);
+        MeleeWeapon meleeWeapon3 = new MeleeWeapon("axe", "Enchanted Axe", 25);
+        RangedWeapon rangedWeapon2 = new RangedWeapon("wand", "Wizard's Wand", 6, 10);
+        room2.addEnemy("spider", "Giant Spider", 40, meleeWeapon3);
+        room2.addEnemy("sorcerer", "Evil Sorcerer", 60, rangedWeapon2);
+
+
+        //room 3
+
+        room3.addFood("elixir", "Elixir of Strength", 70);
+        room3.addItem("crystal ball", "Crystal Ball of Divination");
+        room3.addMeleeWeapon("warhammer", "Warhammer of Titans", 40);
+        room3.addFood("mysterious mushroom", "Mysterious Glowing Mushroom", 50);
+        MeleeWeapon meleeWeapon4 = new MeleeWeapon("spear", "Spear of the Gods", 35);
+        RangedWeapon rangedWeapon3 = new RangedWeapon("crossbow", "Crossbow of Accuracy", 32, 8);
+        room3.addEnemy("dark knight", "Dark Knight", 75, meleeWeapon4);
+        room3.addEnemy("sorceress", "Enchantress Sorceress", 55, rangedWeapon3);
+
+
+        //room 4
+        room4.addFood("golden apple", "Golden Apple of Immortality", 70);
+        room4.addItem("ancient tablet", "Ancient Tablet with Forgotten Runes");
+        room4.addMeleeWeapon("greatsword", "Greatsword of Legends", 45);
+        room4.addFood("honey cake", "Honey Cake of Regeneration", 60);
+        MeleeWeapon meleeWeapon5 = new MeleeWeapon("hammer", "Hammer of Thor", 50);
+        RangedWeapon rangedWeapon4 = new RangedWeapon("magic bow", "Magic Bow of Precision", 40, 12);
+        room4.addEnemy("undead king", "Undead King", 80, meleeWeapon5);
+        room4.addEnemy("shadow assassin", "Shadow Assassin", 70, rangedWeapon4);
+
+
+        //room 5
+        room5.addFood("mystical fruit", "Mystical Fruit of Power", 90);
+        room5.addItem("star chart", "Star Chart of Celestial Navigation");
+        room5.addMeleeWeapon("dragonblade", "Dragonblade of the Ancients", 60);
+        room5.addFood("elixir of wisdom", "Elixir of Wisdom and Knowledge", 80);
+        MeleeWeapon meleeWeapon6 = new MeleeWeapon("giant axe", "Giant Axe of Destruction", 75);
+        RangedWeapon rangedWeapon5 = new RangedWeapon("crystal staff", "Crystal Staff of Sorcery", 55, 15);
+        room5.addEnemy("fire dragon", "Fire Dragon", 100, meleeWeapon6);
+        room5.addEnemy("earth elemental", "Earth Elemental", 90, rangedWeapon5);
+
+        //room 6
+        room6.addFood("ethereal nectar", "Ethereal Nectar of Immortality", 100);
+        room6.addItem("forbidden grimoire", "Forbidden Grimoire of Dark Magic");
+        room6.addMeleeWeapon("legendary spear", "Legendary Spear of Heroes", 70);
+        room6.addFood("golden ambrosia", "Golden Ambrosia of the Gods", 90);
+        MeleeWeapon meleeWeapon7 = new MeleeWeapon("ancient staff", "Ancient Staff of Enchantment", 65);
+        RangedWeapon rangedWeapon6 = new RangedWeapon("divine bow", "Divine Bow of Light", 50, 20);
+        room6.addEnemy("frost giant", "Frost Giant", 110, meleeWeapon7);
+        room6.addEnemy("phoenix", "Phoenix", 95, rangedWeapon6);
+
+        //room 7
+        room7.addFood("elixir of wealth", "Elixir of Wealth and Prosperity", 120);
+        room7.addItem("treasure chest", "Treasure Chest filled with Precious Gems");
+        room7.addMeleeWeapon("demonic sword", "Demonic Sword of Chaos", 80);
+        room7.addFood("luxurious banquet", "Luxurious Banquet fit for a King", 110);
+        MeleeWeapon meleeWeapon8 = new MeleeWeapon("dragon claws", "Dragon Claws of Power", 90);
+        RangedWeapon rangedWeapon7 = new RangedWeapon("magic scepter", "Magic Scepter of Dominion", 70, 25);
+        room7.addEnemy("treasure guardian", "Treasure Guardian", 130, meleeWeapon8);
+        room7.addEnemy("greed demon", "Greed Demon", 120, rangedWeapon7);
+
+        //room 8
+        room8.addFood("ambrosia of the gods", "Ambrosia of the Gods", 150);
+        room8.addItem("crown jewels", "Crown Jewels of the Kingdom");
+        room8.addMeleeWeapon("king's sword", "King's Sword of Authority", 100);
+        room8.addFood("royal feast", "Royal Feast of the Monarchs", 140);
+        MeleeWeapon meleeWeapon9 = new MeleeWeapon("emperor's mace", "Emperor's Mace of Dominance", 110);
+        RangedWeapon rangedWeapon8 = new RangedWeapon("royal scepter", "Royal Scepter of Sovereignty", 90, 30);
+        room8.addEnemy("royal guard", "Royal Guard", 160, meleeWeapon9);
+        room8.addEnemy("sorceress queen", "Sorceress Queen", 150, rangedWeapon8);
+
+        //room 9
+
+        room9.addFood("mysterious artifact", "Mysterious Ancient Artifact", 170);
+        room9.addItem("forbidden tome", "Forbidden Tome of Dark Secrets");
+        room9.addMeleeWeapon("ancient sword", "Ancient Sword of the Elders", 120);
+        room9.addFood("sacrificial offering", "Sacrificial Offering of the Ancients", 160);
+        MeleeWeapon meleeWeapon10 = new MeleeWeapon("legendary halberd", "Legendary Halberd of Legends", 130);
+        RangedWeapon rangedWeapon9 = new RangedWeapon("enchanted bow", "Enchanted Bow of Enigma", 100, 35);
+        room9.addEnemy("eldritch abomination", "Eldritch Abomination", 180, meleeWeapon10);
+        room9.addEnemy("dark sorcerer", "Dark Sorcerer", 170, rangedWeapon9);
+        room9.addItem("gold", "A pile of gold");
+
 
         //Food
         starterRoom = room1;
