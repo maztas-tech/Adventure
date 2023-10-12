@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Player {
     Room currentRoom;
 
-    private int playerHealth = 100;
+    private int playerHealth = 1000;
 
     public void setCurrentRoom(Room newRoom) {
         this.currentRoom = newRoom;
